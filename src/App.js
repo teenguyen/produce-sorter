@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+
+import banner from './resources/header.png';
+import logo from './resources/logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -9,6 +12,12 @@ class App extends Component {
   }
 
   render() {
+    <div>
+      <div className='banner'>
+        <img src={banner} />
+        <img src={logo} />
+      </div>
+    </div>
   }
 }
 
