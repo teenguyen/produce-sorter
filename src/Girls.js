@@ -1,195 +1,195 @@
-import KangHyeWon from './images/girls/8D Creative Kang Hyewon.jpg';
-import KimChoyeon from './images/girls/A team Kim Choyeon.jpg';
-import AsaiNanami from './images/girls/AKB48 Asai Nanami.jpg';
-import ChibaErii from './images/girls/AKB48 Chiba Erii.jpg';
-import GotoMoe from './images/girls/AKB48 Goto Moe.JPG';
-import HondaHitomi from './images/girls/AKB48 Honda Hitomi.jpg';
-import IchikawaManami from './images/girls/AKB48 Ichikawa Manami.jpg';
-import IwatateSaho from './images/girls/AKB48 Iwatate Saho.jpg';
-import KojimaMako from './images/girls/AKB48 Kojima Mako.jpg';
-import MiyazakiMiho from './images/girls/AKB48 Miyazaki Miho.jpg';
-import MogiShinobu from './images/girls/AKB48 Mogi Shinobu.jpg';
-import MutoTomu from './images/girls/AKB48 Muto Tomu.jpg';
-import NakanishiChiyori from './images/girls/AKB48 Nakanishi Chiyori.jpg';
-import NakanoIkumi from './images/girls/AKB48 Nakano Ikumi.jpg';
-import NakanoSerika from './images/girls/AKB48 Nakano Serika.jpg';
-import OdaErina from './images/girls/AKB48 Oda Erina.jpg';
-import SatoMinami from './images/girls/AKB48 Sato Minami.jpg';
-import ShinozakiAyana from './images/girls/AKB48 Shinozaki Ayana.jpg';
-import ShitaoMiu from './images/girls/AKB48 Shitao Miu.jpg';
-import TakahashiJuri from './images/girls/AKB48 Takahashi Juri.jpg';
-import TakeuchiMiyu from './images/girls/AKB48 Takeuchi Miyu.jpg';
-import KimDahye from './images/girls/Banana Culture Kim Dahye.png';
-import KimNayoung from './images/girls/Banana Culture Kim Nayoung.png';
-import KoYujin from './images/girls/Blockberry Ko Yujin.jpg';
-import HongYeji from './images/girls/CNC Hong Yeji.jpg';
-import KimDayeon from './images/girls/CNC Kim Dayeon.jpg';
-import KimYubin from './images/girls/CNC Kim Yoobin.jpg';
-import LeeYujeong from './images/girls/CNC Lee Yujeong.jpg';
-import YoonEunbin from './images/girls/CNC Yoon Eunbin.jpg';
-import HanChowon from './images/girls/CUBE Han Chowon.jpg';
-import ShinSuhyun from './images/girls/FAVE Shin Suhyun.jpg';
-import KimDoah from './images/girls/FENT Kim Doah.jpg';
-import ChoAhyeong from './images/girls/FNC Cho Ahyeong.png';
-import ParkHaeyoon from './images/girls/FNC Park Haeyoon.png';
-import AramakiMisaki from './images/girls/HKT48 Aramaki Misaki.png';
-import ImadaMina from './images/girls/HKT48 Imada Mina.png';
-import KuriharaSae from './images/girls/HKT48 Kurihara Sae.png';
-import MatsuokaNatsumi from './images/girls/HKT48 Matsuoka Natsumi.png';
-import MiyawakiSakura from './images/girls/HKT48 Miyawaki Sakura.png';
-import MotomuraAoi from './images/girls/HKT48 Motomura Aoi.png';
-import MurakawaVivian from './images/girls/HKT48 Murakawa Vivian.png';
-import TanakaMiku from './images/girls/HKT48 Tanaka Miku.png';
-import TsukiashiAmane from './images/girls/HKT48 Tsukiashi Amane.png';
-import YabukiNako from './images/girls/HKT48 Yabuki Nako.png';
-import KimMinseo from './images/girls/HOW Kim Minseo.png';
-import WangKe from './images/girls/HOW Wang Ke.png';
-import YuMinyoung from './images/girls/HOW Yu Minyoung.png';
-import ParkJinny from './images/girls/Individual Trainee Park Jinny.jpg';
-import ParkSeoyoung from './images/girls/Individual Trainee Park Seoyoung.jpg';
-import KimHyunah from './images/girls/Collazoo Company Kim Hyunah.jpg';
-import ChoSarang from './images/girls/Million Market Cho Sarang.png';
-import SonEunchae from './images/girls/Million Market Son Eunchae.png';
-import WonSeoyeon from './images/girls/MMO Won Seoyeon.jpg';
-import LeeChaejeong from './images/girls/MND17 Lee Chaejeong.jpg';
-import ParkChanju from './images/girls/MND17 Park Chanju.jpg';
-import ParkMinji from './images/girls/MND17 Park Minji.jpg';
-import LeeHaeun from './images/girls/MNH Lee Haeun.png';
-import ChoiSoeun from './images/girls/Music Works Choi Soeun.jpg';
-import YoonHaesol from './images/girls/Music Works Yoon Haesol.jpg';
-import HasegawaRena from './images/girls/NGT48 Hasegawa Rena.jpg';
-import YamadaNoe from './images/girls/NGT48 Yamada Noe.jpg';
-import KatoYuuka from './images/girls/NMB48 Kato Yuuka.jpg';
-import MuraseSae from './images/girls/NMB48 Murase Sae.jpg';
-import NaikiKokoro from './images/girls/NMB48 Naiki Kokoro.jpg';
-import ShiromaMiru from './images/girls/NMB48 Shiroma Miru.jpg';
-import UemuraAzusa from './images/girls/NMB48 Uemura Azusa.jpg';
-import UmeyamaCocona from './images/girls/NMB48 Umeyama Cocona.jpg';
-import HuhYunjin from './images/girls/Pledis Huh Yunjin.jpg';
-import LeeGaeun from './images/girls/Pledis Lee Gaeun.jpg';
-import NaGoeun from './images/girls/RBW Na Goeun.png';
-import ParkJieun from './images/girls/RBW Park Jieun.png';
-import AsaiYuka from './images/girls/SKE48 Asai Yuka.png';
-import MatsuiJurina from './images/girls/SKE48 Matsui Jurina.png';
-import AhYujin from './images/girls/Starship An Yujin.jpg';
-import JangWonyoung from './images/girls/Starship Jang Wonyoung.jpg';
-import JoGahyun from './images/girls/Starship Cho Kahyeon.jpg';
-import BaeEunyeong from './images/girls/Stone Music Bae Eunyeong.png';
-import JangGyuri from './images/girls/Stone Music Jang Gyuri.png';
-import JoYuri from './images/girls/Stone Music Jo Yuri.png';
-import LeeSian from './images/girls/Stone Music Lee Sian.png';
-import KimMinju from './images/girls/Urban Works Kim Minju.png';
-import HwangSoyeon from './images/girls/Wellmade Yedang Hwang Soyeon.png';
-import KangDamin from './images/girls/Wellmade Yedang Kang Damin.png';
-import ChoYeongin from './images/girls/WM Cho Yeongin.jpg';
-import LeeChaeyeon from './images/girls/WM Lee Chaeyeon.jpg';
-import LeeSeunghyeon from './images/girls/WM Lee Seunghyeon.jpg';
-import KimChaewon from './images/girls/Woollim Kim Chaewon.jpg';
-import KimSohee from './images/girls/Woollim Kim Sohee.jpg';
-import KimSuyun from './images/girls/Woollim Kim Suyun.jpg';
-import KwonEunbi from './images/girls/Woollim Kwon Eunbi.jpg';
-import AhnYewon from './images/girls/YGK+ Ahn Yewon.jpg';
-import ChoiYeinsoo from './images/girls/YGK+ Choi Yeinsoo.jpg';
-import KimSihyeon from './images/girls/Yuehua Kim Sihyeon.png';
-import WangYiren from './images/girls/Yuehua Wang Yiren.png';
-import ChoiYena from './images/girls/Yuehwa Choi Yena.png';
-import AlexChristine from './images/girls/ZB Label Alex Christine.png';
+import DCreativeKangHyewon              from './images/girls/8DCreativeKangHyewon.jpg';
+import AteamKimChoyeon                  from './images/girls/AteamKimChoyeon.jpg';
+import AKB48AsaiNanami                  from './images/girls/AKB48AsaiNanami.jpg';
+import AKB48ChibaErii                   from './images/girls/AKB48ChibaErii.jpg';
+import AKB48GotoMoe                     from './images/girls/AKB48GotoMoe.jpg';
+import AKB48HondaHitomi                 from './images/girls/AKB48HondaHitomi.jpg';
+import AKB48IchikawaManami              from './images/girls/AKB48IchikawaManami.jpg';
+import AKB48IwatateSaho                 from './images/girls/AKB48IwatateSaho.jpg';
+import AKB48KojimaMako                  from './images/girls/AKB48KojimaMako.jpg';
+import AKB48MiyazakiMiho                from './images/girls/AKB48MiyazakiMiho.jpg';
+import AKB48MogiShinobu                 from './images/girls/AKB48MogiShinobu.jpg';
+import AKB48MutoTomu                    from './images/girls/AKB48MutoTomu.jpg';
+import AKB48NakanishiChiyori            from './images/girls/AKB48NakanishiChiyori.jpg';
+import AKB48NakanoIkumi                 from './images/girls/AKB48NakanoIkumi.jpg';
+import AKB48NakanoSerika                from './images/girls/AKB48NakanoSerika.jpg';
+import AKB48OdaErina                    from './images/girls/AKB48OdaErina.jpg';
+import AKB48SatoMinami                  from './images/girls/AKB48SatoMinami.jpg';
+import AKB48ShinozakiAyana              from './images/girls/AKB48ShinozakiAyana.jpg';
+import AKB48ShitaoMiu                   from './images/girls/AKB48ShitaoMiu.jpg';
+import AKB48TakahashiJuri               from './images/girls/AKB48TakahashiJuri.jpg';
+import AKB48TakeuchiMiyu                from './images/girls/AKB48TakeuchiMiyu.jpg';
+import BananaCultureKimDahye            from './images/girls/BananaCultureKimDahye.png';
+import BananaCultureKimNayoung          from './images/girls/BananaCultureKimNayoung.png';
+import BlockberryKoYujin                from './images/girls/BlockberryKoYujin.jpg';
+import CNCHongYeji                      from './images/girls/CNCHongYeji.jpg';
+import CNCKimDayeon                     from './images/girls/CNCKimDayeon.jpg';
+import CNCKimYoobin                     from './images/girls/CNCKimYoobin.jpg';
+import CNCLeeYujeong                    from './images/girls/CNCLeeYujeong.jpg';
+import CNCYoonEunbin                    from './images/girls/CNCYoonEunbin.jpg';
+import CollazooCompanyKimHyunah         from './images/girls/CollazooCompanyKimHyunah.jpg';
+import CUBEHanChowon                    from './images/girls/CUBEHanChowon.jpg';
+import FAVEShinSuhyun                   from './images/girls/FAVEShinSuhyun.jpg';
+import FENTKimDoah                      from './images/girls/FENTKimDoah.jpg';
+import FNCChoAhyeong                    from './images/girls/FNCChoAhyeong.png';
+import FNCParkHaeyoon                   from './images/girls/FNCParkHaeyoon.png';
+import HKT48AramakiMisaki               from './images/girls/HKT48AramakiMisaki.png';
+import HKT48ImadaMina                   from './images/girls/HKT48ImadaMina.png';
+import HKT48KuriharaSae                 from './images/girls/HKT48KuriharaSae.png';
+import HKT48MatsuokaNatsumi             from './images/girls/HKT48MatsuokaNatsumi.png';
+import HKT48MiyawakiSakura              from './images/girls/HKT48MiyawakiSakura.png';
+import HKT48MotomuraAoi                 from './images/girls/HKT48MotomuraAoi.png';
+import HKT48MurakawaVivian              from './images/girls/HKT48MurakawaVivian.png';
+import HKT48TanakaMiku                  from './images/girls/HKT48TanakaMiku.png';
+import HKT48TsukiashiAmane              from './images/girls/HKT48TsukiashiAmane.png';
+import HKT48YabukiNako                  from './images/girls/HKT48YabukiNako.png';
+import HOWKimMinseo                     from './images/girls/HOWKimMinseo.png';
+import HOWWangKe                        from './images/girls/HOWWangKe.png';
+import HOWYuMinyoung                    from './images/girls/HOWYuMinyoung.png';
+import IndividualTraineeParkJinny       from './images/girls/IndividualTraineeParkJinny.jpg';
+import IndividualTraineeParkSeoyoung    from './images/girls/IndividualTraineeParkSeoyoung.jpg';
+import MillionMarketChoSarang           from './images/girls/MillionMarketChoSarang.png';
+import MillionMarketSonEunchae          from './images/girls/MillionMarketSonEunchae.png';
+import MMOWonSeoyeon                    from './images/girls/MMOWonSeoyeon.jpg';
+import MND17LeeChaejeong                from './images/girls/MND17LeeChaejeong.jpg';
+import MND17ParkChanju                  from './images/girls/MND17ParkChanju.jpg';
+import MND17ParkMinji                   from './images/girls/MND17ParkMinji.jpg';
+import MNHLeeHaeun                      from './images/girls/MNHLeeHaeun.png';
+import MusicWorksChoiSoeun              from './images/girls/MusicWorksChoiSoeun.jpg';
+import MusicWorksYoonHaesol             from './images/girls/MusicWorksYoonHaesol.jpg';
+import NGT48HasegawaRena                from './images/girls/NGT48HasegawaRena.jpg';
+import NGT48YamadaNoe                   from './images/girls/NGT48YamadaNoe.jpg';
+import NMB48KatoYuuka                   from './images/girls/NMB48KatoYuuka.jpg';
+import NMB48MuraseSae                   from './images/girls/NMB48MuraseSae.jpg';
+import NMB48NaikiKokoro                 from './images/girls/NMB48NaikiKokoro.jpg';
+import NMB48ShiromaMiru                 from './images/girls/NMB48ShiromaMiru.jpg';
+import NMB48UemuraAzusa                 from './images/girls/NMB48UemuraAzusa.jpg';
+import NMB48UmeyamaCocona               from './images/girls/NMB48UmeyamaCocona.jpg';
+import PledisHuhYunjin                  from './images/girls/PledisHuhYunjin.jpg';
+import PledisLeeGaeun                   from './images/girls/PledisLeeGaeun.jpg';
+import RBWNaGoeun                       from './images/girls/RBWNaGoeun.png';
+import RBWParkJieun                     from './images/girls/RBWParkJieun.png';
+import SKE48AsaiYuka                    from './images/girls/SKE48AsaiYuka.png';
+import SKE48MatsuiJurina                from './images/girls/SKE48MatsuiJurina.png';
+import StarshipAnYujin                  from './images/girls/StarshipAnYujin.jpg';
+import StarshipJangWonyoung             from './images/girls/StarshipJangWonyoung.jpg';
+import StarshipChoKahyeon               from './images/girls/StarshipChoKahyeon.jpg';
+import StoneMusicBaeEunyeong            from './images/girls/StoneMusicBaeEunyeong.png';
+import StoneMusicJangGyuri              from './images/girls/StoneMusicJangGyuri.png';
+import StoneMusicJoYuri                 from './images/girls/StoneMusicJoYuri.png';
+import StoneMusicLeeSian                from './images/girls/StoneMusicLeeSian.png';
+import UrbanWorksKimMinju               from './images/girls/UrbanWorksKimMinju.png';
+import WellmadeYedangHwangSoyeon        from './images/girls/WellmadeYedangHwangSoyeon.png';
+import WellmadeYedangKangDamin          from './images/girls/WellmadeYedangKangDamin.png';
+import WMChoYeongin                     from './images/girls/WMChoYeongin.jpg';
+import WMLeeChaeyeon                    from './images/girls/WMLeeChaeyeon.jpg';
+import WMLeeSeunghyeon                  from './images/girls/WMLeeSeunghyeon.jpg';
+import WoollimKimChaewon                from './images/girls/WoollimKimChaewon.jpg';
+import WoollimKimSohee                  from './images/girls/WoollimKimSohee.jpg';
+import WoollimKimSuyun                  from './images/girls/WoollimKimSuyun.jpg';
+import WoollimKwonEunbi                 from './images/girls/WoollimKwonEunbi.jpg';
+import YGKAhnYewon                      from './images/girls/YGKAhnYewon.jpg';
+import YGKChoiYeinsoo                   from './images/girls/YGKChoiYeinsoo.jpg';
+import YuehuaKimSihyeon                 from './images/girls/YuehuaKimSihyeon.png';
+import YuehuaWangYiren                  from './images/girls/YuehuaWangYiren.png';
+import YuehwaChoiYena                   from './images/girls/YuehwaChoiYena.png';
+import ZBLabelAlexChristine             from './images/girls/ZBLabelAlexChristine.png';
 
 export const GIRLS = [
-    { company: "8D Creative",           name: "KANG HYEWON",        img: KangHyeWon,        left: false,    elim1: false },
-    { company: "A team",                name: "KIM CHOYEON",        img: KimChoyeon,        left: false,    elim1: false },
-    { company: "AKB48",                 name: "ASAI NANAMI",        img: AsaiNanami,        left: false,    elim1: false },
-    { company: "AKB48",                 name: "CHIBA ERII",         img: ChibaErii,         left: false,    elim1: false },
-    { company: "AKB48",                 name: "GOTO MOE",           img: GotoMoe,           left: false,    elim1: false },
-    { company: "AKB48",                 name: "HONDA HITOMI",       img: HondaHitomi,       left: false,    elim1: false },
-    { company: "AKB48",                 name: "ICHIKAWA MANAMI",    img: IchikawaManami,    left: false,    elim1: true  },
-    { company: "AKB48",                 name: "IWATATE SAHO",       img: IwatateSaho,       left: false,    elim1: false },
-    { company: "AKB48",                 name: "KOJIMA MAKO",        img: KojimaMako,        left: false,    elim1: false },
-    { company: "AKB48",                 name: "MIYAZAKI MIHO",      img: MiyazakiMiho,      left: false,    elim1: false },
-    { company: "AKB48",                 name: "MOGI SHINOBU",       img: MogiShinobu,       left: false,    elim1: true  },
-    { company: "AKB48",                 name: "MUTO TOMU",          img: MutoTomu,          left: false,    elim1: false },
-    { company: "AKB48",                 name: "NAKANISHI CHIYORI",  img: NakanishiChiyori,  left: false,    elim1: false },
-    { company: "AKB48",                 name: "NAKANO IKUMI",       img: NakanoIkumi,       left: false,    elim1: true  },
-    { company: "AKB48",                 name: "NAGANO SERIKA",      img: NakanoSerika,      left: false,    elim1: true  },
-    { company: "AKB48",                 name: "ODA ERINA",          img: OdaErina,          left: false,    elim1: true  },
-    { company: "AKB48",                 name: "SATO MINAMI",        img: SatoMinami,        left: false,    elim1: false },
-    { company: "AKB48",                 name: "SHINOZAKI AYANA",    img: ShinozakiAyana,    left: false,    elim1: true  },
-    { company: "AKB48",                 name: "SHITAO MIU",         img: ShitaoMiu,         left: false,    elim1: false },
-    { company: "AKB48",                 name: "TAKAHASHI JURI",     img: TakahashiJuri,     left: false,    elim1: false },
-    { company: "AKB48",                 name: "TAKEUCHI MIYU",      img: TakeuchiMiyu,      left: false,    elim1: false },
-    { company: "Banana Culture",        name: "KIM DAHYE",          img: KimDahye,          left: false,    elim1: true  },
-    { company: "Banana Culture",        name: "KIM NAYOUNG",        img: KimNayoung,        left: false,    elim1: false },
-    { company: "Blockberry",            name: "KO YUJIN",           img: KoYujin,           left: false,    elim1: false },
-    { company: "CNC",                   name: "HONG YEJI",          img: HongYeji,          left: false,    elim1: true  },
-    { company: "CNC",                   name: "KIM DAYEON",         img: KimDayeon,         left: false,    elim1: true  },
-    { company: "CNC",                   name: "KIM YUBIN",          img: KimYubin,          left: false,    elim1: true  },
-    { company: "CNC",                   name: "LEE YUJEONG",        img: LeeYujeong,        left: false,    elim1: false },
-    { company: "CNC",                   name: "YOON EUNBIN",        img: YoonEunbin,        left: false,    elim1: true  },
-    { company: "Collazoo Company",      name: "KIM HYUNAH",         img: KimHyunah,         left: false,    elim1: false },
-    { company: "CUBE",                  name: "HAN CHOWON",         img: HanChowon,         left: false,    elim1: false },
-    { company: "FAVE",                  name: "SHIN SUHYUN",        img: ShinSuhyun,        left: false,    elim1: true  },
-    { company: "FENT",                  name: "KIM DOAH",           img: KimDoah,           left: false,    elim1: false },
-    { company: "FNC",                   name: "CHO AHYEONG",        img: ChoAhyeong,        left: false,    elim1: false },
-    { company: "FNC",                   name: "PARK HAEYOON",       img: ParkHaeyoon,       left: false,    elim1: false },
-    { company: "HKT48",                 name: "ARAMAKI MISAKI",     img: AramakiMisaki,     left: false,    elim1: false },
-    { company: "HKT48",                 name: "IMADA MINA",         img: ImadaMina,         left: false,    elim1: true  },
-    { company: "HKT48",                 name: "KURIHARA SAE",       img: KuriharaSae,       left: false,    elim1: true  },
-    { company: "HKT48",                 name: "MATSUOKA NATSUMI",   img: MatsuokaNatsumi,   left: false,    elim1: true  },
-    { company: "HKT48",                 name: "MIYAWAKI SAKURA",    img: MiyawakiSakura,    left: false,    elim1: false },
-    { company: "HKT48",                 name: "MOTOMURA AOI",       img: MotomuraAoi,       left: false,    elim1: false },
-    { company: "HKT48",                 name: "MURAKAWA VIVIAN",    img: MurakawaVivian,    left: false,    elim1: false },
-    { company: "HKT48",                 name: "TANAKA MIKU",        img: TanakaMiku,        left: true,     elim1: false },
-    { company: "HKT48",                 name: "TSUKIASHI AMANE",    img: TsukiashiAmane,    left: true,     elim1: false },
-    { company: "HKT48",                 name: "YABUKI NAKO",        img: YabukiNako,        left: false,    elim1: false },
-    { company: "HOW",                   name: "KIM MINSEO",         img: KimMinseo,         left: false,    elim1: false },
-    { company: "HOW",                   name: "WANG KE",            img: WangKe,            left: false,    elim1: false },
-    { company: "HOW",                   name: "YU MINYOUNG",        img: YuMinyoung,        left: false,    elim1: false },
-    { company: "Individual Trainee",    name: "PARK JINNY",         img: ParkJinny,         left: false,    elim1: true  },
-    { company: "Individual Trainee",    name: "PARK SEOYOUNG",      img: ParkSeoyoung,      left: false,    elim1: false },
-    { company: "Million Market",        name: "CHO SARANG",         img: ChoSarang,         left: false,    elim1: true  },
-    { company: "Million Market",        name: "SON EUNCHAE",        img: SonEunchae,        left: false,    elim1: false },
-    { company: "MMO",                   name: "WON SEOYEON",        img: WonSeoyeon,        left: false,    elim1: true  },
-    { company: "M&D17",                 name: "LEE CHAEJEONG",      img: LeeChaejeong,      left: false,    elim1: true  },
-    { company: "M&D17",                 name: "PARK CHANJU",        img: ParkChanju,        left: false,    elim1: true  },
-    { company: "M&D17",                 name: "PARK MINJI",         img: ParkMinji,         left: false,    elim1: false },
-    { company: "MNH",                   name: "LEE HAEUN",          img: LeeHaeun,          left: false,    elim1: false },
-    { company: "Music Works",           name: "CHOI SOEUN",         img: ChoiSoeun,         left: false,    elim1: true  },
-    { company: "Music Works",           name: "YOON HAESOL",        img: YoonHaesol,        left: false,    elim1: false },
-    { company: "NGT48",                 name: "HASEGAWA RENA",      img: HasegawaRena,      left: false,    elim1: true  },
-    { company: "NGT48",                 name: "YAMADA NOE",         img: YamadaNoe,         left: false,    elim1: false },
-    { company: "NMB48",                 name: "KATO YUUKA",         img: KatoYuuka,         left: false,    elim1: true  },
-    { company: "NMB48",                 name: "MURASE SAE",         img: MuraseSae,         left: false,    elim1: false },
-    { company: "NMB48",                 name: "NAIKI KOKORO",       img: NaikiKokoro,       left: false,    elim1: true  },
-    { company: "NMB48",                 name: "SHIROMA MIRU",       img: ShiromaMiru,       left: false,    elim1: false },
-    { company: "NMB48",                 name: "UEMURA AZUSA",       img: UemuraAzusa,       left: true,     elim1: false },
-    { company: "NMB48",                 name: "UMEYAMA COCONA",     img: UmeyamaCocona,     left: false,    elim1: false },
-    { company: "Pledis",                name: "HUH YUNJIN",         img: HuhYunjin,         left: false,    elim1: false },
-    { company: "Pledis",                name: "LEE GAEUN",          img: LeeGaeun,          left: false,    elim1: false },
-    { company: "RBW",                   name: "NA GOEUN",           img: NaGoeun,           left: false,    elim1: false },
-    { company: "RBW",                   name: "PARK JIEUN",         img: ParkJieun,         left: false,    elim1: true  },
-    { company: "SKE48",                 name: "ASAI YUKA",          img: AsaiYuka,          left: false,    elim1: true  },
-    { company: "SKE48",                 name: "MATSUI JURINA",      img: MatsuiJurina,      left: true,     elim1: false },
-    { company: "Starship",              name: "AN YUJIN",           img: AnYujin,           left: false,    elim1: false },
-    { company: "Starship",              name: "JANG WONYOUNG",      img: JangWonyoung,      left: false,    elim1: false },
-    { company: "Starship",              name: "CHO KAHYEON",        img: ChoKahyeon,        left: false,    elim1: false },
-    { company: "Stone Music",           name: "BAE EUNYEONG",       img: BaeEunyeong,       left: false,    elim1: false },
-    { company: "Stone Music",           name: "JANG GYURI",         img: JangGyuri,         left: false,    elim1: false },
-    { company: "Stone Music",           name: "JO YURI",            img: JoYuri,            left: false,    elim1: false },
-    { company: "Stone Music",           name: "LEE SIAN",           img: LeeSian,           left: false,    elim1: false },
-    { company: "Urban Works",           name: "KIM MINJU",          img: KimMinju,          left: false,    elim1: false },
-    { company: "Wellmade Yedang",       name: "HWANG SOYEON",       img: HwangSoyeon,       left: false,    elim1: true  },
-    { company: "Wellmade Yedang",       name: "KANG DAMIN",         img: KangDamin,         left: false,    elim1: true  },
-    { company: "WM",                    name: "CHO YEONGIN",        img: ChoYeongin,        left: false,    elim1: true  },
-    { company: "WM",                    name: "LEE CHAEYEON",       img: LeeChaeyeon,       left: false,    elim1: false },
-    { company: "WM",                    name: "LEE SEUNGHYEON",     img: LeeSeunghyeon,     left: false,    elim1: true  },
-    { company: "Woollim",               name: "KIM CHAEWON",        img: KimChaewon,        left: false,    elim1: false },
-    { company: "Woollim",               name: "KIM SOHEE",          img: KimSohee,          left: false,    elim1: false },
-    { company: "Woollim",               name: "KIM SUYUN",          img: KimSuyun,          left: false,    elim1: false },
-    { company: "Woollim",               name: "KWON EUNBI",         img: KwonEunbi,         left: false,    elim1: false },
-    { company: "YGK+",                  name: "AHN YEWON",          img: AhnYewon,          left: false,    elim1: true  },
-    { company: "YGK+",                  name: "CHOI YEINSOO",       img: ChoiYeinsoo,       left: false,    elim1: true  },
-    { company: "Yuehua",                name: "KIM SIHYEON",        img: KimSihyeon,        left: false,    elim1: false },
-    { company: "Yuehua",                name: "WANG YIREN",         img: WangYiren,         left: false,    elim1: false },
-    { company: "Yuehua",                name: "CHOI YENA",          img: ChoiYena,          left: false,    elim1: false },
-    { company: "ZB Label",              name: "ALEX CHRISTINE",     img: AlexChristine,     left: false,    elim1: true  }
+    { company: "8D Creative",           name: "KANG HYEWON",        img: DCreativeKangHyewon,           left: false,    elim1: false },
+    { company: "A team",                name: "KIM CHOYEON",        img: AteamKimChoyeon,               left: false,    elim1: false },
+    { company: "AKB48",                 name: "ASAI NANAMI",        img: AKB48AsaiNanami,               left: false,    elim1: false },
+    { company: "AKB48",                 name: "CHIBA ERII",         img: AKB48ChibaErii,                left: false,    elim1: false },
+    { company: "AKB48",                 name: "GOTO MOE",           img: AKB48GotoMoe,                  left: false,    elim1: false },
+    { company: "AKB48",                 name: "HONDA HITOMI",       img: AKB48HondaHitomi,              left: false,    elim1: false },
+    { company: "AKB48",                 name: "ICHIKAWA MANAMI",    img: AKB48IchikawaManami,           left: false,    elim1: true  },
+    { company: "AKB48",                 name: "IWATATE SAHO",       img: AKB48IwatateSaho,              left: false,    elim1: false },
+    { company: "AKB48",                 name: "KOJIMA MAKO",        img: AKB48KojimaMako,               left: false,    elim1: false },
+    { company: "AKB48",                 name: "MIYAZAKI MIHO",      img: AKB48MiyazakiMiho,             left: false,    elim1: false },
+    { company: "AKB48",                 name: "MOGI SHINOBU",       img: AKB48MogiShinobu,              left: false,    elim1: true  },
+    { company: "AKB48",                 name: "MUTO TOMU",          img: AKB48MutoTomu,                 left: false,    elim1: false },
+    { company: "AKB48",                 name: "NAKANISHI CHIYORI",  img: AKB48NakanishiChiyori,         left: false,    elim1: false },
+    { company: "AKB48",                 name: "NAKANO IKUMI",       img: AKB48NakanoIkumi,              left: false,    elim1: true  },
+    { company: "AKB48",                 name: "NAGANO SERIKA",      img: AKB48NakanoSerika,             left: false,    elim1: true  },
+    { company: "AKB48",                 name: "ODA ERINA",          img: AKB48OdaErina,                 left: false,    elim1: true  },
+    { company: "AKB48",                 name: "SATO MINAMI",        img: AKB48SatoMinami,               left: false,    elim1: false },
+    { company: "AKB48",                 name: "SHINOZAKI AYANA",    img: AKB48ShinozakiAyana,           left: false,    elim1: true  },
+    { company: "AKB48",                 name: "SHITAO MIU",         img: AKB48ShitaoMiu,                left: false,    elim1: false },
+    { company: "AKB48",                 name: "TAKAHASHI JURI",     img: AKB48TakahashiJuri,            left: false,    elim1: false },
+    { company: "AKB48",                 name: "TAKEUCHI MIYU",      img: AKB48TakeuchiMiyu,             left: false,    elim1: false },
+    { company: "Banana Culture",        name: "KIM DAHYE",          img: BananaCultureKimDahye,         left: false,    elim1: true  },
+    { company: "Banana Culture",        name: "KIM NAYOUNG",        img: BananaCultureKimNayoung,       left: false,    elim1: false },
+    { company: "Blockberry",            name: "KO YUJIN",           img: BlockberryKoYujin,             left: false,    elim1: false },
+    { company: "CNC",                   name: "HONG YEJI",          img: CNCHongYeji,                   left: false,    elim1: true  },
+    { company: "CNC",                   name: "KIM DAYEON",         img: CNCKimDayeon,                  left: false,    elim1: true  },
+    { company: "CNC",                   name: "KIM YUBIN",          img: CNCKimYoobin,                  left: false,    elim1: true  },
+    { company: "CNC",                   name: "LEE YUJEONG",        img: CNCLeeYujeong,                 left: false,    elim1: false },
+    { company: "CNC",                   name: "YOON EUNBIN",        img: CNCYoonEunbin,                 left: false,    elim1: true  },
+    { company: "Collazoo Company",      name: "KIM HYUNAH",         img: CollazooCompanyKimHyunah,      left: false,    elim1: false },
+    { company: "CUBE",                  name: "HAN CHOWON",         img: CUBEHanChowon,                 left: false,    elim1: false },
+    { company: "FAVE",                  name: "SHIN SUHYUN",        img: FAVEShinSuhyun,                left: false,    elim1: true  },
+    { company: "FENT",                  name: "KIM DOAH",           img: FENTKimDoah,                   left: false,    elim1: false },
+    { company: "FNC",                   name: "CHO AHYEONG",        img: FNCChoAhyeong,                 left: false,    elim1: false },
+    { company: "FNC",                   name: "PARK HAEYOON",       img: FNCParkHaeyoon,                left: false,    elim1: false },
+    { company: "HKT48",                 name: "ARAMAKI MISAKI",     img: HKT48AramakiMisaki,            left: false,    elim1: false },
+    { company: "HKT48",                 name: "IMADA MINA",         img: HKT48ImadaMina,                left: false,    elim1: true  },
+    { company: "HKT48",                 name: "KURIHARA SAE",       img: HKT48KuriharaSae,              left: false,    elim1: true  },
+    { company: "HKT48",                 name: "MATSUOKA NATSUMI",   img: HKT48MatsuokaNatsumi,          left: false,    elim1: true  },
+    { company: "HKT48",                 name: "MIYAWAKI SAKURA",    img: HKT48MiyawakiSakura,           left: false,    elim1: false },
+    { company: "HKT48",                 name: "MOTOMURA AOI",       img: HKT48MotomuraAoi,              left: false,    elim1: false },
+    { company: "HKT48",                 name: "MURAKAWA VIVIAN",    img: HKT48MurakawaVivian,           left: false,    elim1: false },
+    { company: "HKT48",                 name: "TANAKA MIKU",        img: HKT48TanakaMiku,               left: true,     elim1: false },
+    { company: "HKT48",                 name: "TSUKIASHI AMANE",    img: HKT48TsukiashiAmane,           left: true,     elim1: false },
+    { company: "HKT48",                 name: "YABUKI NAKO",        img: HKT48YabukiNako,               left: false,    elim1: false },
+    { company: "HOW",                   name: "KIM MINSEO",         img: HOWKimMinseo,                  left: false,    elim1: false },
+    { company: "HOW",                   name: "WANG KE",            img: HOWWangKe,                     left: false,    elim1: false },
+    { company: "HOW",                   name: "YU MINYOUNG",        img: HOWYuMinyoung,                 left: false,    elim1: false },
+    { company: "Individual Trainee",    name: "PARK JINNY",         img: IndividualTraineeParkJinny,    left: false,    elim1: true  },
+    { company: "Individual Trainee",    name: "PARK SEOYOUNG",      img: IndividualTraineeParkSeoyoung, left: false,    elim1: false },
+    { company: "Million Market",        name: "CHO SARANG",         img: MillionMarketChoSarang,        left: false,    elim1: true  },
+    { company: "Million Market",        name: "SON EUNCHAE",        img: MillionMarketSonEunchae,       left: false,    elim1: false },
+    { company: "MMO",                   name: "WON SEOYEON",        img: MMOWonSeoyeon,                 left: false,    elim1: true  },
+    { company: "M&D17",                 name: "LEE CHAEJEONG",      img: MND17LeeChaejeong,             left: false,    elim1: true  },
+    { company: "M&D17",                 name: "PARK CHANJU",        img: MND17ParkChanju,               left: false,    elim1: true  },
+    { company: "M&D17",                 name: "PARK MINJI",         img: MND17ParkMinji,                left: false,    elim1: false },
+    { company: "MNH",                   name: "LEE HAEUN",          img: MNHLeeHaeun,                   left: false,    elim1: false },
+    { company: "Music Works",           name: "CHOI SOEUN",         img: MusicWorksChoiSoeun,           left: false,    elim1: true  },
+    { company: "Music Works",           name: "YOON HAESOL",        img: MusicWorksYoonHaesol,          left: false,    elim1: false },
+    { company: "NGT48",                 name: "HASEGAWA RENA",      img: NGT48HasegawaRena,             left: false,    elim1: true  },
+    { company: "NGT48",                 name: "YAMADA NOE",         img: NGT48YamadaNoe,                left: false,    elim1: false },
+    { company: "NMB48",                 name: "KATO YUUKA",         img: NMB48KatoYuuka,                left: false,    elim1: true  },
+    { company: "NMB48",                 name: "MURASE SAE",         img: NMB48MuraseSae,                left: false,    elim1: false },
+    { company: "NMB48",                 name: "NAIKI KOKORO",       img: NMB48NaikiKokoro,              left: false,    elim1: true  },
+    { company: "NMB48",                 name: "SHIROMA MIRU",       img: NMB48ShiromaMiru,              left: false,    elim1: false },
+    { company: "NMB48",                 name: "UEMURA AZUSA",       img: NMB48UemuraAzusa,              left: true,     elim1: false },
+    { company: "NMB48",                 name: "UMEYAMA COCONA",     img: NMB48UmeyamaCocona,            left: false,    elim1: false },
+    { company: "Pledis",                name: "HUH YUNJIN",         img: PledisHuhYunjin,               left: false,    elim1: false },
+    { company: "Pledis",                name: "LEE GAEUN",          img: PledisLeeGaeun,                left: false,    elim1: false },
+    { company: "RBW",                   name: "NA GOEUN",           img: RBWNaGoeun,                    left: false,    elim1: false },
+    { company: "RBW",                   name: "PARK JIEUN",         img: RBWParkJieun,                  left: false,    elim1: true  },
+    { company: "SKE48",                 name: "ASAI YUKA",          img: SKE48AsaiYuka,                 left: false,    elim1: true  },
+    { company: "SKE48",                 name: "MATSUI JURINA",      img: SKE48MatsuiJurina,             left: true,     elim1: false },
+    { company: "Starship",              name: "AN YUJIN",           img: StarshipAnYujin,               left: false,    elim1: false },
+    { company: "Starship",              name: "JANG WONYOUNG",      img: StarshipJangWonyoung,          left: false,    elim1: false },
+    { company: "Starship",              name: "CHO KAHYEON",        img: StarshipChoKahyeon,            left: false,    elim1: false },
+    { company: "Stone Music",           name: "BAE EUNYEONG",       img: StoneMusicBaeEunyeong,         left: false,    elim1: false },
+    { company: "Stone Music",           name: "JANG GYURI",         img: StoneMusicJangGyuri,           left: false,    elim1: false },
+    { company: "Stone Music",           name: "JO YURI",            img: StoneMusicJoYuri,              left: false,    elim1: false },
+    { company: "Stone Music",           name: "LEE SIAN",           img: StoneMusicLeeSian,             left: false,    elim1: false },
+    { company: "Urban Works",           name: "KIM MINJU",          img: UrbanWorksKimMinju,            left: false,    elim1: false },
+    { company: "Wellmade Yedang",       name: "HWANG SOYEON",       img: WellmadeYedangHwangSoyeon,     left: false,    elim1: true  },
+    { company: "Wellmade Yedang",       name: "KANG DAMIN",         img: WellmadeYedangKangDamin,       left: false,    elim1: true  },
+    { company: "WM",                    name: "CHO YEONGIN",        img: WMChoYeongin,                  left: false,    elim1: true  },
+    { company: "WM",                    name: "LEE CHAEYEON",       img: WMLeeChaeyeon,                 left: false,    elim1: false },
+    { company: "WM",                    name: "LEE SEUNGHYEON",     img: WMLeeSeunghyeon,               left: false,    elim1: true  },
+    { company: "Woollim",               name: "KIM CHAEWON",        img: WoollimKimChaewon,             left: false,    elim1: false },
+    { company: "Woollim",               name: "KIM SOHEE",          img: WoollimKimSohee,               left: false,    elim1: false },
+    { company: "Woollim",               name: "KIM SUYUN",          img: WoollimKimSuyun,               left: false,    elim1: false },
+    { company: "Woollim",               name: "KWON EUNBI",         img: WoollimKwonEunbi,              left: false,    elim1: false },
+    { company: "YGK+",                  name: "AHN YEWON",          img: YGKAhnYewon,                   left: false,    elim1: true  },
+    { company: "YGK+",                  name: "CHOI YEINSOO",       img: YGKChoiYeinsoo,                left: false,    elim1: true  },
+    { company: "Yuehua",                name: "KIM SIHYEON",        img: YuehuaKimSihyeon,              left: false,    elim1: false },
+    { company: "Yuehua",                name: "WANG YIREN",         img: YuehuaWangYiren,               left: false,    elim1: false },
+    { company: "Yuehua",                name: "CHOI YENA",          img: YuehwaChoiYena,                left: false,    elim1: false },
+    { company: "ZB Label",              name: "ALEX CHRISTINE",     img: ZBLabelAlexChristine,          left: false,    elim1: true  }
 ]
