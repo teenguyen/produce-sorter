@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+$theme-pink: #ff50a0;
+$sub-pink: #ffe4f2;
+$bg-grey: #ececf1;
+$white: #fff;
+$black: #333;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $black;
+
+  .header {
+    background-image: url(./resources/logo.png), url(./resources/header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+
+  .content {
+    padding: 75px 0;
+    text-align: center;
+
+    select {
+      border: solid 3px $theme-pink;
+      width: 250px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .startButton {
+      background-color: $theme-pink;
+      border: none;
+      color: $white;
+      padding: 10px 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        background-color: darken($theme-pink, 20%);
+      }
+    }
+  }
+  
+  .footer {
+    background: url(./resources/header.png) center no-repeat;
+    height: 75px;
+    position: relative;
+  }
+}

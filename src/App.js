@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
+import GroupPicker from './pages/GroupPicker';
+import SortPicker from './pages/SortPicker';
 import './App.css';
 
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            group: null
+        };
+        this.onChange = this.onChange.bind(this);
+    }
 
-import banner from './resources/header.png';
-import logo from './resources/logo.png';
+    onChange(event) {
+        this.setState({
+            group: event.target.value
+        });
+    }
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    
-  }
+    render() {
+        let contentStyle = {
+        padding: '100px 0'
+        };
 
-  render() {
-    <div>
-      <div className='banner'>
-        <img src={banner} />
-        <img src={logo} />
-      </div>
-    </div>
-  }
+        return(
+        <div>
+            <div className='header' />
+            <div className='content'>
+                <GroupPicker group={this.state.group} onChange={this.onChange} />
+            </div>
+            <div className='footer'>
+            </div>
+        </div>
+        );
+    }
 }
-
-export default App;
