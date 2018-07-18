@@ -11,7 +11,7 @@ const mapStateToProps = state => {
     return { group: state.group };
 };
 
-function GroupPickerComponent(props) {
+const GroupPickerComponent = ({ group }) => {
     const options = ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>)
     let girlList = GIRLS.filter(girl => {
         switch(props.group) {
@@ -27,7 +27,7 @@ function GroupPickerComponent(props) {
     girlList = shuffle(girlList) // let's not be bias :)
     const girlObj = girlList.map(girl => <MiniIcon key={girl.name} girl={girl} />);
 
-    return(
+    return (
         <div className='group-picker'>
             <select value={props.group} onChange={props.onChange}>
                 {options}
