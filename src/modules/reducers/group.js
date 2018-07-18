@@ -1,10 +1,10 @@
 import { GIRLS } from './../util/Girls';
 import actions from './../actions/actionTypes';
 
-export const girls = (state = GIRLS, action) => {
+export const group = (state = GIRLS, action) => {
     switch(action.type) {
-        case actions.SET_GIRLS_LIST:
-            return action.girls;
+        case actions.SET_GROUP_LIST:
+            return { ...state, group: [...state.group, action.payload] };
         default:
             return state;
     }
