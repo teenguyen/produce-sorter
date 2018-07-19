@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 $theme-pink: #ff50a0;
 $sub-pink: #ffe4f2;
 $bg-grey: #ececf1;
@@ -8,7 +8,6 @@ $black: #333;
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
   color: $black;
 
   .wrapper {
@@ -37,24 +36,14 @@ body {
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 1.2rem;
       }
-  
+
       button {
-        background-color: lighten($theme-pink, 15%);
         border: none;
         padding: 10px 20px;
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 1.2rem;
-        color: $white;
         cursor: pointer;
         text-decoration: none;
-  
-        &:focus {
-          outline: 0;
-        }
-  
-        &:hover {
-          background-color: $theme-pink
-        }
       }
 
       .group-picker {
@@ -63,15 +52,64 @@ body {
           flex-flow: wrap;
           justify-content: center;
         }
+  
+        .start-btn {
+          background-color: lighten($theme-pink, 15%);
+          color: $white;
     
-        .mini-icon > img {
-          height: 75px;
-          width: 75px;
-          padding: 5px;
-
-          &:hover {
-
+          &:focus {
+            outline: 0;
           }
+    
+          &:hover {
+            background-color: $theme-pink
+          }
+        }
+      }
+
+      .sort-picker {
+        .option-button {
+          background-color: $bg-grey;
+          color: $white;
+    
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+
+      .main-icon {
+        background-color: $sub-pink;
+        color: $theme-pink;
+        display: inline-block;
+        border-radius: 50px;
+
+        img {
+          border-radius: 50px 50px 0 0;
+        }
+
+        div {
+          margin: 1rem;
+
+          p {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300;
+            margin: 0;
+
+            &:first-child {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    
+      .mini-icon > img {
+        height: 75px;
+        width: 75px;
+        padding: 5px;
+
+        &:hover {
+
         }
       }
     }

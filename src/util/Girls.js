@@ -89,7 +89,7 @@ import WoollimKimSohee                  from './../resources/girls/WoollimKimSoh
 import WoollimKimSuyun                  from './../resources/girls/WoollimKimSuyun.jpg';
 import WoollimKwonEunbi                 from './../resources/girls/WoollimKwonEunbi.jpg';
 import YGKAhnYewon                      from './../resources/girls/YGKAhnYewon.jpg';
-import YGKChoiYeinsoo                   from './../resources/girls/YGKChoiYeinsoo.jpg';
+import YGKChoiYeonsoo                   from './../resources/girls/YGKChoiYeonsoo.jpg';
 import YuehuaKimSihyeon                 from './../resources/girls/YuehuaKimSihyeon.png';
 import YuehuaWangYiren                  from './../resources/girls/YuehuaWangYiren.png';
 import YuehwaChoiYena                   from './../resources/girls/YuehwaChoiYena.png';
@@ -129,7 +129,7 @@ export const GIRLS = [
     { company: "CUBE",                  name: "HAN CHOWON",         img: CUBEHanChowon,                 left: false,    elim1: false },
     { company: "FAVE",                  name: "SHIN SUHYUN",        img: FAVEShinSuhyun,                left: false,    elim1: true  },
     { company: "FENT",                  name: "KIM DOAH",           img: FENTKimDoah,                   left: false,    elim1: false },
-    { company: "FNC",                   name: "CHO AHYEONG",        img: FNCChoAhyeong,                 left: false,    elim1: false },
+    { company: "FNC",                   name: "CHO AHYEONG",        img: FNCChoAhyeong,                 left: false,    elim1: true  },
     { company: "FNC",                   name: "PARK HAEYOON",       img: FNCParkHaeyoon,                left: false,    elim1: false },
     { company: "HKT48",                 name: "ARAMAKI MISAKI",     img: HKT48AramakiMisaki,            left: false,    elim1: false },
     { company: "HKT48",                 name: "IMADA MINA",         img: HKT48ImadaMina,                left: false,    elim1: true  },
@@ -162,13 +162,13 @@ export const GIRLS = [
     { company: "NMB48",                 name: "NAIKI KOKORO",       img: NMB48NaikiKokoro,              left: false,    elim1: true  },
     { company: "NMB48",                 name: "SHIROMA MIRU",       img: NMB48ShiromaMiru,              left: false,    elim1: false },
     { company: "NMB48",                 name: "UEMURA AZUSA",       img: NMB48UemuraAzusa,              left: true,     elim1: false },
-    { company: "NMB48",                 name: "UMEYAMA COCONA",     img: NMB48UmeyamaCocona,            left: false,    elim1: false },
+    { company: "NMB48",                 name: "UMEYAMA COCONA",     img: NMB48UmeyamaCocona,            left: true,     elim1: false },
     { company: "Pledis",                name: "HUH YUNJIN",         img: PledisHuhYunjin,               left: false,    elim1: false },
     { company: "Pledis",                name: "LEE GAEUN",          img: PledisLeeGaeun,                left: false,    elim1: false },
     { company: "RBW",                   name: "NA GOEUN",           img: RBWNaGoeun,                    left: false,    elim1: false },
     { company: "RBW",                   name: "PARK JIEUN",         img: RBWParkJieun,                  left: false,    elim1: true  },
     { company: "SKE48",                 name: "ASAI YUKA",          img: SKE48AsaiYuka,                 left: false,    elim1: true  },
-    { company: "SKE48",                 name: "MATSUI JURINA",      img: SKE48MatsuiJurina,             left: true,     elim1: false },
+    { company: "SKE48",                 name: "MATSUI JURINA",      img: SKE48MatsuiJurina,             left: false,    elim1: false },
     { company: "Starship",              name: "AN YUJIN",           img: StarshipAnYujin,               left: false,    elim1: false },
     { company: "Starship",              name: "JANG WONYOUNG",      img: StarshipJangWonyoung,          left: false,    elim1: false },
     { company: "Starship",              name: "CHO KAHYEON",        img: StarshipChoKahyeon,            left: false,    elim1: false },
@@ -187,7 +187,7 @@ export const GIRLS = [
     { company: "Woollim",               name: "KIM SUYUN",          img: WoollimKimSuyun,               left: false,    elim1: false },
     { company: "Woollim",               name: "KWON EUNBI",         img: WoollimKwonEunbi,              left: false,    elim1: false },
     { company: "YGK+",                  name: "AHN YEWON",          img: YGKAhnYewon,                   left: false,    elim1: true  },
-    { company: "YGK+",                  name: "CHOI YEINSOO",       img: YGKChoiYeinsoo,                left: false,    elim1: true  },
+    { company: "YGK+",                  name: "CHOI YEONSOO",       img: YGKChoiYeonsoo,                left: false,    elim1: true  },
     { company: "Yuehua",                name: "KIM SIHYEON",        img: YuehuaKimSihyeon,              left: false,    elim1: false },
     { company: "Yuehua",                name: "WANG YIREN",         img: YuehuaWangYiren,               left: false,    elim1: false },
     { company: "Yuehua",                name: "CHOI YENA",          img: YuehwaChoiYena,                left: false,    elim1: false },

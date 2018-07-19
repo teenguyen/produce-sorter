@@ -1,35 +1,38 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+
 import GroupPicker from './pages/GroupPicker';
 import SortPicker from './pages/SortPicker';
-import './App.css';
+import Result from './pages/Result';
+import { GIRLS } from './util/Girls';
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            group: 0
+            group: 0,
+            girls: GIRLS
         };
-        this.onChange = this.onChange.bind(this);
+        this.onReady = this.onReady.bind(this);
     }
 
-    onChange(event) {
-        this.setState({
-            group: event.target.value
-        });
+    onReady(group, girlList) {
+        this.setState({ group: group, girls: girlList });
     }
 
     render() {
         return(
-        <div className='wrapper'>
-            <div className='header' />
-            <div className='content'>
-                <Route exact path="/" render={() => <GroupPicker group={this.state.group} onChange={this.onChange} />} />
-                <Route path="/home" render={() => <GroupPicker group={this.state.group} onChange={this.onChange} />} />
-                <Route path="/sort" render={() => <SortPicker />} />
+            <div className='wrapper'>
+                <div className='header' />
+                <div className='content'>
+                    <Switch>
+                        <Route path='/sort' render={() => <SortPicker state={this.state} />} />
+                        <Route path='/results' render={() => <Result state={this.state} />} />
+                        <Route render={() => <GroupPicker state={this.state} onReady={this.onReady}/>} />
+                    </Switch>
+                </div>
+                <div className='footer' />
             </div>
-            <div className='footer' />
-        </div>
         );
     }
 }
