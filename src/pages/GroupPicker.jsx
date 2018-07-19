@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 
 import MiniIcon from './../components/MiniIcon';
@@ -7,18 +6,14 @@ import { ROUNDS } from './../util/Constants';
 import { GIRLS } from './../util/Girls';
 import { shuffle } from './../util/Functions';
 
-const mapStateToProps = state => {
-    return { group: state.group };
-};
-
-function GroupPickerComponent(props) {
+export default function GroupPicker(props) {
     const options = ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>)
     let girlList = GIRLS.filter(girl => {
         switch(props.group) {
             case '1':
-                return !girl.preElim
+                return !girl.left
             case '2':
-                return !girl.preElim && !girl.elim1;
+                return !girl.left && !girl.elim1;
             case '0':
             default:
                 return true;
@@ -47,6 +42,3 @@ function GroupPickerComponent(props) {
         </div>
     );
 }
-
-const GroupPicker = connect(mapStateToProps)(GroupPickerComponent);
-export default GroupPicker;

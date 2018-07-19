@@ -1,1 +1,1 @@
-export const SET_GROUP_LIST = 'SET_GROUP_LIST';
+export const SET_GIRLS_LIST = 'SET_GIRLS_LIST';

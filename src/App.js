@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-
 import GroupPicker from './pages/GroupPicker';
 import SortPicker from './pages/SortPicker';
 import './App.css';
