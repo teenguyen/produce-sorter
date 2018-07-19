@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import MiniIcon from './../components/MiniIcon';
+import MiniIcon from './GroupPicker/MiniIcon';
 import { ROUNDS } from './../util/Constants';
 import { GIRLS } from './../util/Girls';
 import { shuffle } from './../util/Functions';
