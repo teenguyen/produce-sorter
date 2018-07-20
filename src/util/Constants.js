@@ -3,3 +3,8 @@ export const ROUNDS = [
     { key:1, name:'Left Show (92)' },
     { key:2, name:'Elimination 1 (58)' }
 ];
+
+export const GIRL1 = 'GIRL1';
+export const GIRL2 = 'GIRL2';
+export const TIED = 'TIED';
+export const NONE = 'NONE';

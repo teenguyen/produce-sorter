@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 $theme-pink: #ff50a0;
 $sub-pink: #ffe4f2;
-$bg-grey: #ececf1;
+$bg-grey: #e9edf0;
 $white: #fff;
 $black: #333;
+$link-blue: #2d9cdb;
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
   color: $black;
+  overflow-x: hidden;
+}
+
+body {
 
   .wrapper {
     display: flex;
@@ -25,9 +31,18 @@ body {
     }
   
     .content {
-      padding: 50px 75px 100px;
+      padding: 10px 15vw 100px;
       text-align: center;
       flex: 1;
+
+      .sub-text {
+        font-size: 0.8rem;
+        margin: 0;
+      }
+
+      a {
+        color: $link-blue;
+      }
 
       select {
         border: solid 3px $theme-pink;
@@ -44,6 +59,11 @@ body {
         font-size: 1.2rem;
         cursor: pointer;
         text-decoration: none;
+        background-color: $bg-grey;
+
+        &:focus {
+          outline: 0;
+        }
       }
 
       .group-picker {
@@ -68,12 +88,31 @@ body {
       }
 
       .sort-picker {
-        .option-button {
-          background-color: $bg-grey;
-          color: $white;
-    
-          &:focus {
-            outline: 0;
+        .pair {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+          align-items: center;
+        }
+
+        button {
+          border: solid 2px transparent;
+
+          &.sort-girl-btn {
+            padding: 0;
+            border-radius: 50px;
+            background-color: transparent;
+          }
+  
+          &.sort-other-btn {
+            min-width: 125px;
+            border-radius: 7px;
+            font-weight: 300;
+            margin: 5px;
+          }
+
+          &:hover {
+            border: solid 2px $theme-pink;
           }
         }
       }
@@ -85,6 +124,7 @@ body {
         border-radius: 50px;
 
         img {
+          max-width: 275px;
           border-radius: 50px 50px 0 0;
         }
 
@@ -92,7 +132,6 @@ body {
           margin: 1rem;
 
           p {
-            font-family: 'Roboto Condensed', sans-serif;
             font-weight: 300;
             margin: 0;
 
