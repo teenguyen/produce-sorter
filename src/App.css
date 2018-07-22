@@ -57,7 +57,7 @@ html, body {
       margin-top: 25px; }
     .wrapper .content .sort-picker .pair {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-grow: 1;
       align-items: center; }
     .wrapper .content .sort-picker button {
@@ -65,7 +65,8 @@ html, body {
       .wrapper .content .sort-picker button.sort-girl-btn {
         padding: 0;
         border-radius: 50px;
-        background-color: transparent; }
+        background-color: transparent;
+        margin: 0 75px; }
       .wrapper .content .sort-picker button.sort-other-btn {
         min-width: 125px;
         border-radius: 7px;
@@ -79,15 +80,23 @@ html, body {
       display: inline-block;
       border-radius: 50px; }
       .wrapper .content .main-icon img {
-        max-width: 275px;
+        max-width: 100%;
+        min-width: 200px;
         border-radius: 50px 50px 0 0; }
-      .wrapper .content .main-icon div {
+      .wrapper .content .main-icon .desc {
         margin: 1rem; }
-        .wrapper .content .main-icon div p {
+        .wrapper .content .main-icon .desc p {
           font-weight: 300;
           margin: 0; }
-          .wrapper .content .main-icon div p:first-child {
+          .wrapper .content .main-icon .desc p:first-child {
             font-size: 1.5rem; }
+    .wrapper .content .ranking {
+      background-color: #ff50a0;
+      color: #fff;
+      display: inline-block;
+      padding: 5px 10px; }
+      .wrapper .content .ranking p {
+        margin: 0; }
     .wrapper .content .mini-icon > img {
       height: 75px;
       width: 75px;

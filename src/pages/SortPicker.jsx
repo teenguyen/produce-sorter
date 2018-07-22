@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
-import VotingButton from './../components/VotingButton';
+
+
 import './../resources/bootstrap/bootstrap.css';
 import './../resources/bootstrap/bootstrap-theme.css';
-
+import Result from './Result';
+import VotingButton from './../components/VotingButton';
 import MainIcon from './../components/MainIcon';
 import { GIRL1, GIRL2, TIED, NONE } from './../util/Constants';
 
@@ -52,7 +53,7 @@ export default class SortPicker extends Component {
                     girls.splice(left + 1, 0, [ this.state.girl2 ]);
                     this.setNewGirls(girls, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, left, right);
+                    const midGirl = this.getMidGirl(girls, left, right, GIRL1);
                     this.setState({
                         pairCount: pairCount,
                         girl1: midGirl.girl,
@@ -64,8 +65,9 @@ export default class SortPicker extends Component {
                 right = g1;
                 if (right - left === 0) {
                     girls.splice(left, 0, [ this.state.girl2 ]);
+                    this.setNewGirls(girls, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, left, right);
+                    const midGirl = this.getMidGirl(girls, left, right, GIRL2);
                     this.setState({
                         pairCount: pairCount,
                         girl1: midGirl.girl,
@@ -85,7 +87,7 @@ export default class SortPicker extends Component {
 
                 this.setState({
                     noneGirls: noneGirls,
-                    progress: Math.floor(((this.state.nextGirl - 1)/this.props.state.girls.length) * 100),
+                    progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
                     pairCount: pairCount,
                     girl1: midGirl.girl,
                     girl2: this.props.state.girls[nextGirlIdx],
@@ -105,7 +107,7 @@ export default class SortPicker extends Component {
 
         this.setState({
             sortedGirls: girls,
-            progress: Math.floor(((this.state.nextGirl - 1)/this.props.state.girls.length) * 100),
+            progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
             pairCount: pairCount,
             girl1: midGirl.girl,
             girl2: this.props.state.girls[nextGirlIdx],
@@ -126,49 +128,33 @@ export default class SortPicker extends Component {
         }
     }
 
-    getMidGirl(girls, left = null, right = null) {
+    getMidGirl(girls, left = null, right = null, girlPicked = null) {
         if (left === null && right === null) {
             left = 0;
             right = girls.length - 1; // we want arr pos, not length
         }
 
-        const midIdx = Math.ceil((left + right) / 2);
+        let midIdx;
+        if (girlPicked === GIRL1) {
+            midIdx = Math.ceil((left + right) / 2);
+        } else {
+            midIdx = Math.floor((left + right) / 2);
+        }
         const midGirl = { idx: midIdx, girl: girls[midIdx][0] };
         return midGirl;
     }
 
-    static getDerivedStateFromProps(props, state) {
-        if (state.nextGirl > props.state.girls.length) {
-            let allGirls = state.sortedGirls.slice();
-            let noneGirls = state.noneGirls;
-            if (noneGirls.length > 0) {
-                allGirls.push(state.noneGirls);
-            }
-            props.setGirls(allGirls);
-        }
-
-        return null;
-    }
-
     render() {
+        let sortPicker;
         if (this.state.nextGirl > this.props.state.girls.length) {
-            return <Redirect to='/results' push={true} />
-        }
+            sortPicker = <Result girls={this.state.sortedGirls} />
+        } else {
+            const girl1 = <MainIcon girl={this.state.girl1} />
+            const girl2 = <MainIcon girl={this.state.girl2} />
 
-        const progressBarStyle = { width: `${this.state.progress}%` };
-        const girl1 = <MainIcon girl={this.state.girl1} />
-        const girl2 = <MainIcon girl={this.state.girl2} />
-        return(
-            <div className='sort-picker'>
-                <div className='progress'>
-                    <div className='progress-bar progress-bar-striped active' role='progressbar' style={progressBarStyle}></div>
-                </div>
+            sortPicker = 
                 <div>
-                    <p>{this.state.progress}% Sorted</p>
                     <p>Pair #{this.state.pairCount}</p>
-                </div>
-                <br />
-                <div>
                     <div className='pair'>
                         <VotingButton content={girl1} className='sort-girl-btn' onClick={() => this.onClick(GIRL1)} />
                         <p>vs</p>
@@ -182,6 +168,16 @@ export default class SortPicker extends Component {
                         <VotingButton content={`No Opinion of ${this.state.girl2.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE)} />
                     </div>
                 </div>
+        }
+
+        const progressBarStyle = { width: `${this.state.progress}%` };
+        return(
+            <div className='sort-picker'>
+                <div className='progress'>
+                    <div className='progress-bar progress-bar-striped active' role='progressbar' style={progressBarStyle}></div>
+                </div>
+                <p>{this.state.progress}% Sorted</p>
+                {sortPicker}
             </div>
         );
     }
