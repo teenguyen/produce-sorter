@@ -19,8 +19,7 @@ html, body {
     height: 250px; }
   .wrapper .content {
     padding: 10px 15vw 100px;
-    text-align: center;
-    flex: 1; }
+    text-align: center; }
     .wrapper .content .sub-text {
       font-size: 0.8rem;
       margin: 0; }
@@ -42,6 +41,40 @@ html, body {
       background-color: #e9edf0; }
       .wrapper .content button:focus {
         outline: 0; }
+    .wrapper .content .main-icon {
+      position: relative; }
+      .wrapper .content .main-icon .icon-image-desc {
+        background-color: #ffe4f2;
+        color: #ff50a0;
+        display: inline-block;
+        border-radius: 50px; }
+        .wrapper .content .main-icon .icon-image-desc img {
+          max-width: 100%;
+          min-width: 200px;
+          border-radius: 50px 50px 0 0; }
+        .wrapper .content .main-icon .icon-image-desc .desc {
+          margin: 1rem; }
+          .wrapper .content .main-icon .icon-image-desc .desc p {
+            font-weight: 300;
+            margin: 0; }
+            .wrapper .content .main-icon .icon-image-desc .desc p:first-child {
+              font-size: 1.5rem; }
+      .wrapper .content .main-icon .ranking {
+        position: absolute;
+        bottom: 20%;
+        left: 43%;
+        margin: 0 auto;
+        background-color: #ff50a0;
+        color: #fff;
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 5px 10px; }
+        .wrapper .content .main-icon .ranking p {
+          margin: 0; }
+    .wrapper .content .mini-icon > img {
+      height: 75px;
+      width: 75px;
+      padding: 5px; }
     .wrapper .content .group-picker .group-picker-all {
       display: flex;
       flex-flow: wrap;
@@ -74,33 +107,8 @@ html, body {
         margin: 5px; }
       .wrapper .content .sort-picker button:hover {
         border: solid 2px #ff50a0; }
-    .wrapper .content .main-icon {
-      background-color: #ffe4f2;
-      color: #ff50a0;
-      display: inline-block;
-      border-radius: 50px; }
-      .wrapper .content .main-icon img {
-        max-width: 100%;
-        min-width: 200px;
-        border-radius: 50px 50px 0 0; }
-      .wrapper .content .main-icon .desc {
-        margin: 1rem; }
-        .wrapper .content .main-icon .desc p {
-          font-weight: 300;
-          margin: 0; }
-          .wrapper .content .main-icon .desc p:first-child {
-            font-size: 1.5rem; }
-    .wrapper .content .ranking {
-      background-color: #ff50a0;
-      color: #fff;
-      display: inline-block;
-      padding: 5px 10px; }
-      .wrapper .content .ranking p {
-        margin: 0; }
-    .wrapper .content .mini-icon > img {
-      height: 75px;
-      width: 75px;
-      padding: 5px; }
+    .wrapper .content .results {
+      display: grid; }
   .wrapper .footer {
     background: url(./resources/header.png) center no-repeat;
     height: 75px; }

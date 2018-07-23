@@ -15,7 +15,7 @@ export default function Result(props) {
     let top12 = [];
 
     return(
-        <div>
+        <div className='results'>
             <div className='first'>{first}</div>
             <div className='second-third'>{secondThird}</div>
             <div className='top12'>{top12}</div>
