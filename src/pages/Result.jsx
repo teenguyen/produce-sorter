@@ -1,24 +1,49 @@
 import React from 'react';
 
 import MainIcon from './../components/MainIcon';
+import MiniIcon from './../components/MiniIcon';
 
 export default function Result(props) {
-    let posCount = 0;
-
-    let first = props.girls[0].map(girl => <MainIcon girl={girl} rank='1' />)
-    posCount += first.length;
-
-    let secondThird = props.girls[1].map(girl => <MainIcon girl={girl} rank='2' />)
-    secondThird.push(...(props.girls[2].map(girl => <MainIcon girl={girl} rank='3' />)));
-    posCount += secondThird.length;
-
+    let posCount = 1;
+    let girls = props.girls;
+    let top3 = [];
     let top12 = [];
+    let all = [];
+
+    // top 3
+    while (posCount < 3) {
+        for (let i = 0; i < girls.length; i++) {
+            for (let j = 0; j < girls[i].length; j++) {
+                top3.push(<MainIcon girl={girls[i][j]} rank={posCount} />)
+            }
+            posCount++;
+        }
+    }
+
+    // // top 12
+    // while (posCount < 12) {
+    //     for (let i = posCount; i < girls.length; i++) {
+    //         for (let j = 0; j < girls[i].length; j++) {
+    //             top12.push(<MainIcon girl={girls[i][j]} rank={posCount} />)
+    //         }
+    //         posCount++;
+    //     }
+    // }
+
+
+    // // all
+    // for (let i = posCount; i < girls.length; i++) {
+    //     for (let j = 0; j < girls[i].length; j++) {
+    //         top12.push(<MiniIcon girl={girls[i][j]} rank={posCount} />)
+    //     }
+    //     posCount++
+    // }
 
     return(
         <div className='results'>
-            <div className='first'>{first}</div>
-            <div className='second-third'>{secondThird}</div>
-            <div className='top12'>{top12}</div>
+            <div className='flex top3'>{top3}</div>
+            <div className='flex top12'>{top12}</div>
+            <div className='flex all'>{all}</div>
         </div>
     );
 }

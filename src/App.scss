@@ -63,9 +63,14 @@ html, body {
       }
     }
 
-    .main-icon {
-      position: relative;
+    .flex {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      align-items: center;
+    }
 
+    .main-icon {
       .icon-image-desc {
         background-color: $sub-pink;
         color: $theme-pink;
@@ -147,13 +152,6 @@ html, body {
         margin-top: 25px;
       }
 
-      .pair {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-        align-items: center;
-      }
-
       button {
         border: solid 2px transparent;
 
@@ -178,7 +176,17 @@ html, body {
     }
 
     .results {
-      display: grid;
+      .top3 {
+        flex-wrap: wrap;
+        
+        > div:first-child {
+          width: 100%;
+        }
+
+        > div:not(:first-child) {
+          width: 50%;
+        }
+      }
     }
   }
 

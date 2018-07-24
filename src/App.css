@@ -41,36 +41,39 @@ html, body {
       background-color: #e9edf0; }
       .wrapper .content button:focus {
         outline: 0; }
-    .wrapper .content .main-icon {
-      position: relative; }
-      .wrapper .content .main-icon .icon-image-desc {
-        background-color: #ffe4f2;
-        color: #ff50a0;
-        display: inline-block;
-        border-radius: 50px; }
-        .wrapper .content .main-icon .icon-image-desc img {
-          max-width: 100%;
-          min-width: 200px;
-          border-radius: 50px 50px 0 0; }
-        .wrapper .content .main-icon .icon-image-desc .desc {
-          margin: 1rem; }
-          .wrapper .content .main-icon .icon-image-desc .desc p {
-            font-weight: 300;
-            margin: 0; }
-            .wrapper .content .main-icon .icon-image-desc .desc p:first-child {
-              font-size: 1.5rem; }
-      .wrapper .content .main-icon .ranking {
-        position: absolute;
-        bottom: 20%;
-        left: 43%;
-        margin: 0 auto;
-        background-color: #ff50a0;
-        color: #fff;
-        font-size: 1.2rem;
-        display: inline-block;
-        padding: 5px 10px; }
-        .wrapper .content .main-icon .ranking p {
+    .wrapper .content .flex {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      align-items: center; }
+    .wrapper .content .main-icon .icon-image-desc {
+      background-color: #ffe4f2;
+      color: #ff50a0;
+      display: inline-block;
+      border-radius: 50px; }
+      .wrapper .content .main-icon .icon-image-desc img {
+        max-width: 100%;
+        min-width: 200px;
+        border-radius: 50px 50px 0 0; }
+      .wrapper .content .main-icon .icon-image-desc .desc {
+        margin: 1rem; }
+        .wrapper .content .main-icon .icon-image-desc .desc p {
+          font-weight: 300;
           margin: 0; }
+          .wrapper .content .main-icon .icon-image-desc .desc p:first-child {
+            font-size: 1.5rem; }
+    .wrapper .content .main-icon .ranking {
+      position: absolute;
+      bottom: 20%;
+      left: 43%;
+      margin: 0 auto;
+      background-color: #ff50a0;
+      color: #fff;
+      font-size: 1.2rem;
+      display: inline-block;
+      padding: 5px 10px; }
+      .wrapper .content .main-icon .ranking p {
+        margin: 0; }
     .wrapper .content .mini-icon > img {
       height: 75px;
       width: 75px;
@@ -88,11 +91,6 @@ html, body {
         background-color: #ff50a0; }
     .wrapper .content .sort-picker .progress {
       margin-top: 25px; }
-    .wrapper .content .sort-picker .pair {
-      display: flex;
-      justify-content: center;
-      flex-grow: 1;
-      align-items: center; }
     .wrapper .content .sort-picker button {
       border: solid 2px transparent; }
       .wrapper .content .sort-picker button.sort-girl-btn {
@@ -107,8 +105,12 @@ html, body {
         margin: 5px; }
       .wrapper .content .sort-picker button:hover {
         border: solid 2px #ff50a0; }
-    .wrapper .content .results {
-      display: grid; }
+    .wrapper .content .results .top3 {
+      flex-wrap: wrap; }
+      .wrapper .content .results .top3 > div:first-child {
+        width: 100%; }
+      .wrapper .content .results .top3 > div:not(:first-child) {
+        width: 50%; }
   .wrapper .footer {
     background: url(./resources/header.png) center no-repeat;
     height: 75px; }

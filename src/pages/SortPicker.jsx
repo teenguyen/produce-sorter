@@ -155,7 +155,7 @@ export default class SortPicker extends Component {
             sortPicker = 
                 <div>
                     <p>Pair #{this.state.pairCount}</p>
-                    <div className='pair'>
+                    <div className='flex'>
                         <VotingButton content={girl1} className='sort-girl-btn' onClick={() => this.onClick(GIRL1)} />
                         <p>vs</p>
                         <VotingButton content={girl2} className='sort-girl-btn' onClick={() => this.onClick(GIRL2)} />
