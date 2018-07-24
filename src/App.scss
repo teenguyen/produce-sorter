@@ -76,42 +76,23 @@ html, body {
         color: $theme-pink;
         display: inline-block;
         border-radius: 50px;
-
-        img {
-          max-width: 100%;
-          min-width: 200px;
-          border-radius: 50px 50px 0 0;
-        }
-
-        .desc {
-          margin: 1rem;
-
-          p {
-            font-weight: 300;
-            margin: 0;
-
-            &:first-child {
-              font-size: 1.5rem;
-            }
-          }
-        }
       }
 
-      .ranking {
-        position: absolute;
-        bottom: 20%;
-        left: 43%;
-        margin: 0 auto;
-        background-color: $theme-pink;
-        color: $white;
-        font-size: 1.2rem;
-        display: inline-block;
-        padding: 5px 10px;
+      // .ranking {
+      //   position: absolute;
+      //   bottom: 20%;
+      //   left: 43%;
+      //   margin: 0 auto;
+      //   background-color: $theme-pink;
+      //   color: $white;
+      //   font-size: 1.2rem;
+      //   display: inline-block;
+      //   padding: 5px 10px;
   
-        p {
-          margin: 0;
-        }
-      }
+      //   p {
+      //     margin: 0;
+      //   }
+      // }
     }
   
     .mini-icon {
@@ -155,6 +136,28 @@ html, body {
       button {
         border: solid 2px transparent;
 
+        .main-icon {
+          img {
+            max-width: 100%;
+            min-width: 200px;
+            border-radius: 50px 50px 0 0;
+          }
+
+          .desc {
+            margin: 1rem;
+
+            p {
+              font-size: 1rem;
+              font-weight: 300;
+              margin: 0;
+
+              &:first-child {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
         &.sort-girl-btn {
           padding: 0;
           border-radius: 50px;
@@ -176,6 +179,30 @@ html, body {
     }
 
     .results {
+      .main-icon {
+        .icon-image-desc {
+          img {
+            max-width: 50%;
+            max-width: 175px;
+            border-radius: 50px 50px 0 0;
+          }
+  
+          .desc {
+            margin: 1rem;
+  
+            p {
+              font-size: 0.9rem;
+              font-weight: 300;
+              margin: 0;
+  
+              &:first-child {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+
       .top3 {
         flex-wrap: wrap;
         
