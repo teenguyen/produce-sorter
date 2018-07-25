@@ -211,8 +211,12 @@ html, body {
         }
 
         > div:not(:first-child) {
-          width: 50%;
+          margin: 10px 25px;
         }
+      }
+
+      .top12 {
+        flex-wrap: wrap;
       }
     }
   }

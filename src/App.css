@@ -111,7 +111,9 @@ html, body {
       .wrapper .content .results .top3 > div:first-child {
         width: 100%; }
       .wrapper .content .results .top3 > div:not(:first-child) {
-        width: 50%; }
+        margin: 10px 25px; }
+    .wrapper .content .results .top12 {
+      flex-wrap: wrap; }
   .wrapper .footer {
     background: url(./resources/header.png) center no-repeat;
     height: 75px; }

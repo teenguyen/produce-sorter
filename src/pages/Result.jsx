@@ -11,33 +11,34 @@ export default function Result(props) {
     let all = [];
 
     // top 3
-    while (posCount < 3) {
-        for (let i = 0; i < girls.length; i++) {
-            for (let j = 0; j < girls[i].length; j++) {
-                top3.push(<MainIcon girl={girls[i][j]} rank={posCount} />)
-            }
-            posCount++;
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < girls[i].length; j++) {
+            top3.push(<MainIcon girl={girls[i][j]} rank={posCount} />);
         }
+        posCount++;
     }
 
-    // // top 12
-    // while (posCount < 12) {
-    //     for (let i = posCount; i < girls.length; i++) {
-    //         for (let j = 0; j < girls[i].length; j++) {
-    //             top12.push(<MainIcon girl={girls[i][j]} rank={posCount} />)
-    //         }
-    //         posCount++;
-    //     }
-    // }
+    // top 12
+    for (let i = posCount; i < 13; i++) {
+        for (let j = 0; j < girls[i].length; j++) {
+            top12.push(<MainIcon girl={girls[i][j]} rank={posCount} />);
+        }
+        posCount++;
+    }
 
 
-    // // all
-    // for (let i = posCount; i < girls.length; i++) {
-    //     for (let j = 0; j < girls[i].length; j++) {
-    //         top12.push(<MiniIcon girl={girls[i][j]} rank={posCount} />)
-    //     }
-    //     posCount++
-    // }
+    // all
+    for (let i = posCount; i < girls.length; i++) {
+        for (let j = 0; j < girls[i].length; j++) {
+            all.push(
+                <div>
+                    <MiniIcon girl={girls[i][j]} rank={posCount} />
+                    {`${posCount}. ${girls[i][j].name}`}
+                </div>
+            );
+        }
+        posCount++
+    }
 
     return(
         <div className='results'>
