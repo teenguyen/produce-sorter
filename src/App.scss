@@ -67,7 +67,7 @@ html, body {
       display: flex;
       justify-content: center;
       flex-grow: 1;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .main-icon {
@@ -76,23 +76,21 @@ html, body {
         color: $theme-pink;
         display: inline-block;
         border-radius: 50px;
-      }
 
-      // .ranking {
-      //   position: absolute;
-      //   bottom: 20%;
-      //   left: 43%;
-      //   margin: 0 auto;
-      //   background-color: $theme-pink;
-      //   color: $white;
-      //   font-size: 1.2rem;
-      //   display: inline-block;
-      //   padding: 5px 10px;
-  
-      //   p {
-      //     margin: 0;
-      //   }
-      // }
+        .desc {
+          margin: 1rem;
+
+          p {
+            font-size: 0.8rem;
+            font-weight: 300;
+            margin: 0;
+
+            &:first-child {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
   
     .mini-icon {
@@ -143,19 +141,15 @@ html, body {
             border-radius: 50px 50px 0 0;
           }
 
-          .desc {
-            margin: 1rem;
+          // .desc {
+          //   p {
+          //     font-size: 1rem;
 
-            p {
-              font-size: 1rem;
-              font-weight: 300;
-              margin: 0;
-
-              &:first-child {
-                font-size: 1.5rem;
-              }
-            }
-          }
+          //     &:first-child {
+          //       font-size: 1.2rem;
+          //     }
+          //   }
+          // }
         }
 
         &.sort-girl-btn {
@@ -179,44 +173,72 @@ html, body {
     }
 
     .results {
-      .main-icon {
-        .icon-image-desc {
-          img {
-            max-width: 50%;
-            max-width: 175px;
-            border-radius: 50px 50px 0 0;
+      .top3 {
+        flex-wrap: wrap;
+
+        .main-icon {
+          &:first-child {
+            width: 100%;
           }
   
-          .desc {
-            margin: 1rem;
-  
-            p {
-              font-size: 0.9rem;
-              font-weight: 300;
-              margin: 0;
-  
-              &:first-child {
-                font-size: 1.1rem;
-              }
+          &:not(:first-child) {
+            max-width: 175px;
+            margin: 10px 25px;
+          }
+
+          .icon-image-desc {
+            border-radius: 35px;
+
+            img {
+              max-width: 50%;
+              max-width: 175px;
+              border-radius: 35px 35px 0 0;
             }
           }
         }
       }
 
-      .top3 {
+      .top12 {
         flex-wrap: wrap;
-        
-        > div:first-child {
-          width: 100%;
-        }
 
-        > div:not(:first-child) {
+        .main-icon {
           margin: 10px 25px;
+          width: 20%;
+          max-width: 125px;
+
+          .icon-image-desc {
+            border-radius: 25px;
+            img {
+              max-width: 25%;
+              max-width: 125px;
+              border-radius: 25px 25px 0 0;
+            }
+          }
         }
       }
 
-      .top12 {
+      .all {
         flex-wrap: wrap;
+        align-content: stretch;
+        text-align: left;
+
+        .flex {
+          width: 33.33%;
+          flex-grow: 0;
+          justify-content: flex-start;
+
+          > :not(:first-child) {
+            padding: 5px 2px;
+          }
+
+          .ranking {
+            color: $theme-pink;
+
+            & + p {
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }
