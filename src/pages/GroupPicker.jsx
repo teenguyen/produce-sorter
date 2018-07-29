@@ -38,9 +38,9 @@ export default class GroupPicker extends Component {
     
         return(
             <div className='group-picker'>
-                <h2>Welcome to the PRODUCE 48 Picker</h2>
+                <h2>Welcome to the PRODUCE 48 Sorter</h2>
                 <p className='sub-text'>For best results, avoid picking tied.</p> 
-                <p className='sub-text'>Girls that fall into neither will be removed from the sort and added to the bottom of your results.</p>
+                <p className='sub-text'>Girls that fall into none will be removed from the sort and added to the bottom of your results.</p>
                 <p className='sub-text'>Please report any issues <a href='https://github.com/RYUUSEiiSTAR/produce48-sorter/issues'>here</a></p>
                 <br />
                 <select value={this.state.currentGroup} onChange={this.onChange}>

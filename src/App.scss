@@ -29,6 +29,7 @@ html, body {
   }
 
   .content {
+    flex-grow: 1;
     padding: 10px 15vw 100px;
     text-align: center;
 
@@ -87,6 +88,7 @@ html, body {
 
             &:first-child {
               font-size: 1rem;
+              font-weight: 400;
             }
           }
         }
@@ -141,15 +143,16 @@ html, body {
             border-radius: 50px 50px 0 0;
           }
 
-          // .desc {
-          //   p {
-          //     font-size: 1rem;
+          .desc {
+            p {
+              font-size: 1rem;
 
-          //     &:first-child {
-          //       font-size: 1.2rem;
-          //     }
-          //   }
-          // }
+              &:first-child {
+                font-size: 1.2rem;
+                font-weight: 300;
+              }
+            }
+          }
         }
 
         &.sort-girl-btn {
@@ -208,6 +211,7 @@ html, body {
 
           .icon-image-desc {
             border-radius: 25px;
+
             img {
               max-width: 25%;
               max-width: 125px;
@@ -236,6 +240,7 @@ html, body {
 
             & + p {
               margin: 0;
+              font-weight: 300;
             }
           }
         }

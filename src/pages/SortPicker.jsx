@@ -6,7 +6,7 @@ import './../resources/bootstrap/bootstrap-theme.css';
 import Result from './Result';
 import VotingButton from './../components/VotingButton';
 import MainIcon from './../components/MainIcon';
-import { GIRL1, GIRL2, TIED, NONE } from './../util/Constants';
+import { GIRL1, GIRL2, TIED, NONE, NONE_FIRST } from './../util/Constants';
 
 export default class SortPicker extends Component {
     constructor(props) {
@@ -14,14 +14,8 @@ export default class SortPicker extends Component {
         let girl1 = this.props.state.girls[0];
         let girl2 = this.props.state.girls[1];
 
-        let firstSort = [];
-        firstSort.push(girl1);
-        
-        let sortedGirls = [];
-        sortedGirls.push(firstSort);
-
         this.state = {
-            sortedGirls: sortedGirls,
+            sortedGirls: [],
             noneGirls: [],
             pairCount: 1,
             progress: 0,
@@ -29,17 +23,19 @@ export default class SortPicker extends Component {
             girl2: girl2,
             nextGirl: 2,
             left: 0,
-            right: sortedGirls.length - 1 // we want arr pos, not length
+            right: 0
         }
 
         this.onClick = this.onClick.bind(this);
         this.setNewGirls = this.setNewGirls.bind(this);
+        this.setNoneGirls = this.setNoneGirls.bind(this);
         this.getIndex = this.getIndex.bind(this);
         this.getMidGirl = this.getMidGirl.bind(this);
     }
 
     onClick(opt) {
-        let girls = this.state.sortedGirls.slice(); // y u not immutable omfg
+        let girls = this.state.sortedGirls.slice();
+        let noneGirls = this.state.noneGirls.slice();
         let pairCount = this.state.pairCount;
         pairCount++;
         let left = this.state.left;
@@ -49,11 +45,14 @@ export default class SortPicker extends Component {
         switch(opt) {
             case GIRL1:
                 left = g1;
-                if (right - left === 0) {
+                if (girls.length === 0) {
+                    girls.push([this.state.girl1], [this.state.girl2]);
+                    this.setNewGirls(girls, pairCount);
+                } else if (right - left === 0) {
                     girls.splice(left + 1, 0, [ this.state.girl2 ]);
                     this.setNewGirls(girls, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, left, right, GIRL1);
+                    const midGirl = this.getMidGirl(girls, GIRL1, left, right);
                     this.setState({
                         pairCount: pairCount,
                         girl1: midGirl.girl,
@@ -63,11 +62,14 @@ export default class SortPicker extends Component {
                 break;
             case GIRL2:
                 right = g1;
-                if (right - left === 0) {
+                if (girls.length === 0) {
+                    girls.push([this.state.girl2], [this.state.girl1]);
+                    this.setNewGirls(girls, pairCount);
+                } else if (right - left === 0) {
                     girls.splice(left, 0, [ this.state.girl2 ]);
                     this.setNewGirls(girls, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, left, right, GIRL2);
+                    const midGirl = this.getMidGirl(girls, GIRL2, left, right);
                     this.setState({
                         pairCount: pairCount,
                         girl1: midGirl.girl,
@@ -76,25 +78,20 @@ export default class SortPicker extends Component {
                 }
                 break;
             case TIED:
-                girls[g1].push(this.state.girl2);
+                if (girls.length === 0) {
+                    girls.push([this.state.girl1, this.state.girl2])
+                } else {
+                    girls[g1].push(this.state.girl2);
+                }
                 this.setNewGirls(girls, pairCount);
                 break;
             case NONE:
-                let noneGirls = this.state.noneGirls;
-                noneGirls.push(this.state.girl2)
-                const midGirl = this.getMidGirl(girls);
-                let nextGirlIdx = this.state.nextGirl;
-
-                this.setState({
-                    noneGirls: noneGirls,
-                    progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
-                    pairCount: pairCount,
-                    girl1: midGirl.girl,
-                    girl2: this.props.state.girls[nextGirlIdx],
-                    nextGirl: nextGirlIdx + 1,
-                    left: 0,
-                    right: girls.length - 1 // we want arr pos, not length
-                });
+                noneGirls.push(this.state.girl2);
+                this.setNoneGirls(girls, noneGirls, pairCount);
+                break;
+            case NONE_FIRST:
+                noneGirls.push(this.state.girl1)
+                this.setNoneGirls(girls, noneGirls, pairCount);
                 break;
             default:
                 break;
@@ -117,6 +114,27 @@ export default class SortPicker extends Component {
         });
     }
 
+    setNoneGirls(girls, noneGirls, pairCount) {
+        let nextGirlIdx = this.state.nextGirl;
+        let g1;
+        if (girls.length === 0) {
+            g1 = this.state.girl2;
+        } else {
+            g1 = this.getMidGirl(girls);
+        }
+
+        this.setState({
+            noneGirls: noneGirls,
+            progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
+            pairCount: pairCount,
+            girl1: g1,
+            girl2: this.props.state.girls[nextGirlIdx],
+            nextGirl: nextGirlIdx + 1,
+            left: 0,
+            right: girls.length - 1 // we want arr pos, not length
+        });
+    }
+
     getIndex(girl) {
         const girls = this.state.sortedGirls
         for(let i = 0; i < girls.length; i++) {
@@ -128,7 +146,7 @@ export default class SortPicker extends Component {
         }
     }
 
-    getMidGirl(girls, left = null, right = null, girlPicked = null) {
+    getMidGirl(girls, girlPicked = null, left = null, right = null) {
         if (left === null && right === null) {
             left = 0;
             right = girls.length - 1; // we want arr pos, not length
@@ -147,10 +165,19 @@ export default class SortPicker extends Component {
     render() {
         let sortPicker;
         if (this.state.nextGirl > this.props.state.girls.length) {
-            sortPicker = <Result girls={this.state.sortedGirls} />
+            let sortedGirls = this.state.sortedGirls;
+            sortedGirls.push(this.state.noneGirls);
+            sortPicker = <Result girls={sortedGirls} />
         } else {
             const girl1 = <MainIcon girl={this.state.girl1} />
             const girl2 = <MainIcon girl={this.state.girl2} />
+            let firstPick = null;
+            if (this.state.sortedGirls.length === 0) {
+                firstPick = 
+                <div>
+                    <VotingButton content={`No Opinion of ${this.state.girl1.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE_FIRST)} />
+                </div>
+            }
 
             sortPicker = 
                 <div>
@@ -164,6 +191,7 @@ export default class SortPicker extends Component {
                     <div>
                         <VotingButton content='Tied' className='sort-other-btn' onClick={() => this.onClick(TIED)} />
                     </div>
+                    {firstPick}
                     <div>
                         <VotingButton content={`No Opinion of ${this.state.girl2.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE)} />
                     </div>

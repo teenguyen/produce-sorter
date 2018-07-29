@@ -8,3 +8,4 @@ export const GIRL1 = 'GIRL1';
 export const GIRL2 = 'GIRL2';
 export const TIED = 'TIED';
 export const NONE = 'NONE';
+export const NONE_FIRST = 'NONE_FIRST';

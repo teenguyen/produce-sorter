@@ -1,5 +1,6 @@
 {
-  "name": "produce48-picker",
+  "name": "produce48-sorter",
+  "homepage": "http://theresa-nguyen.com/produce48-sorter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

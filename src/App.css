@@ -18,6 +18,7 @@ html, body {
     background-repeat: no-repeat;
     height: 250px; }
   .wrapper .content {
+    flex-grow: 1;
     padding: 10px 15vw 100px;
     text-align: center; }
     .wrapper .content .sub-text {
@@ -58,7 +59,8 @@ html, body {
           font-weight: 300;
           margin: 0; }
           .wrapper .content .main-icon .icon-image-desc .desc p:first-child {
-            font-size: 1rem; }
+            font-size: 1rem;
+            font-weight: 400; }
     .wrapper .content .mini-icon > img {
       height: 75px;
       width: 75px;
@@ -82,6 +84,11 @@ html, body {
         max-width: 100%;
         min-width: 200px;
         border-radius: 50px 50px 0 0; }
+      .wrapper .content .sort-picker button .main-icon .desc p {
+        font-size: 1rem; }
+        .wrapper .content .sort-picker button .main-icon .desc p:first-child {
+          font-size: 1.2rem;
+          font-weight: 300; }
       .wrapper .content .sort-picker button.sort-girl-btn {
         padding: 0;
         border-radius: 50px;
@@ -132,7 +139,8 @@ html, body {
         .wrapper .content .results .all .flex .ranking {
           color: #ff50a0; }
           .wrapper .content .results .all .flex .ranking + p {
-            margin: 0; }
+            margin: 0;
+            font-weight: 300; }
   .wrapper .footer {
     background: url(./resources/header.png) center no-repeat;
     height: 75px; }
