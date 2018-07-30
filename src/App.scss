@@ -71,6 +71,10 @@ html, body {
       align-items: flex-start;
     }
 
+    .flex-center {
+      align-items: center;
+    }
+
     .main-icon {
       .icon-image-desc {
         background-color: $sub-pink;
@@ -79,6 +83,7 @@ html, body {
         border-radius: 50px;
 
         .desc {
+          min-height: 55px;
           margin: 1rem;
 
           p {

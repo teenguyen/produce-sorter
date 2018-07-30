@@ -47,12 +47,15 @@ html, body {
       justify-content: center;
       flex-grow: 1;
       align-items: flex-start; }
+    .wrapper .content .flex-center {
+      align-items: center; }
     .wrapper .content .main-icon .icon-image-desc {
       background-color: #ffe4f2;
       color: #ff50a0;
       display: inline-block;
       border-radius: 50px; }
       .wrapper .content .main-icon .icon-image-desc .desc {
+        min-height: 55px;
         margin: 1rem; }
         .wrapper .content .main-icon .icon-image-desc .desc p {
           font-size: 0.8rem;
