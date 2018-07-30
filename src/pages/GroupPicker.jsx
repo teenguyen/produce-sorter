@@ -28,6 +28,8 @@ export default class GroupPicker extends Component {
                     return !girl.left
                 case '2':
                     return !girl.left && !girl.elim1;
+                // case '3':
+                //     return !girl.left && !girl.elim1 && !girl.elim2;
                 case '0':
                 default:
                     return true;
@@ -55,7 +57,7 @@ export default class GroupPicker extends Component {
                 </Link>
                 <br />
                 <br />
-                <div className='group-picker-all'>
+                <div className='flex flex-wrap'>
                     {girlObj}
                 </div>
             </div>
