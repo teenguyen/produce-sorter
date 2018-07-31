@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import GroupPicker from './pages/GroupPicker';
 import SortPicker from './pages/SortPicker';
+import logo from './resources/logo.png';
 import { GIRLS } from './util/Girls';
 
 export default class App extends Component {
@@ -22,7 +23,11 @@ export default class App extends Component {
     render() {
         return(
             <div className='wrapper'>
-                <div className='header' />
+                <div className='header flex flex-center'>
+                    <Link to='/'>
+                        <img src={logo} alt='PRODUCE 48 Logo' />
+                    </Link>
+                </div>
                 <div className='content'>
                     <Switch>
                         <Route path='/sort' render={() => <SortPicker state={this.state} />} />

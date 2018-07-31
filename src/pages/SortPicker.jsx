@@ -87,11 +87,11 @@ export default class SortPicker extends Component {
                 break;
             case NONE:
                 noneGirls.push(this.state.girl2);
-                this.setNoneGirls(girls, noneGirls, pairCount);
+                this.setNoneGirls(girls, noneGirls, pairCount, NONE);
                 break;
             case NONE_FIRST:
                 noneGirls.push(this.state.girl1)
-                this.setNoneGirls(girls, noneGirls, pairCount);
+                this.setNoneGirls(girls, noneGirls, pairCount, NONE_FIRST);
                 break;
             default:
                 break;
@@ -114,11 +114,11 @@ export default class SortPicker extends Component {
         });
     }
 
-    setNoneGirls(girls, noneGirls, pairCount) {
+    setNoneGirls(girls, noneGirls, pairCount, girlPicked) {
         let nextGirlIdx = this.state.nextGirl;
         let g1;
         if (girls.length === 0) {
-            g1 = this.state.girl2;
+            girlPicked === NONE ? g1 = this.state.girl1 : g1 = this.state.girl2;
         } else {
             g1 = this.getMidGirl(girls);
         }

@@ -14,6 +14,16 @@ export default function Result(props) {
         let count = 0;
         for (let j = 0; j < girls[i].length; j++) {
             if (top3.length < 3) {
+                // let width = 100;
+                // if (i === 0) {
+                //     width = width/girls[0].length;
+                // } else {
+                //     let widthCount = girls[0].length;
+                //     while (widthCount < 3) {
+
+                //     }
+                // }
+
                 top3.push(<MainIcon key={girls[i][j].name} girl={girls[i][j]} rank={posCount} />);
                 count++;
             } else if (top3.length + top12.length < 12) {
@@ -21,10 +31,13 @@ export default function Result(props) {
                 count++;
             } else {
                 all.push(
-                    <div className='flex' key={girls[i][j].name}>
+                    <div className='flex all-girl' key={girls[i][j].name}>
                         <MiniIcon girl={girls[i][j]} rank={posCount} />
                         <div className='ranking'>{`${posCount}. `}</div>
-                        <p>{girls[i][j].name}</p>
+                        <div className='desc'>
+                            <p>{girls[i][j].name}</p>
+                            <p>{girls[i][j].company}</p>
+                        </div>
                     </div>
                 );
                 count++;

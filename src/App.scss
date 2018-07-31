@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 $theme-pink: #ff50a0;
 $sub-pink: #ffe4f2;
-$bg-grey: #e9edf0;
+$bg-grey: #ebebf1;
 $white: #fff;
 $black: #333;
 $font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
@@ -11,7 +11,7 @@ html, body {
   font-family: $font-family;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -23,10 +23,23 @@ html, body {
   min-height: 100vh;
   width: 100vw;
 
+  .flex {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .flex-center {
+    align-items: center;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .header {
-    background-image: url(./resources/logo.png), url(./resources/header.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(./resources/header.png) center repeat;
     height: 250px;
   }
 
@@ -43,7 +56,6 @@ html, body {
       border: none;
       padding: 10px 20px;
       font-family: $font-family;
-      font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
       background-color: $bg-grey;
@@ -64,21 +76,6 @@ html, body {
     .sub-text {
       font-size: 0.8rem;
       margin: 0;
-    }
-
-    .flex {
-      display: flex;
-      flex-grow: 1;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .flex-center {
-      align-items: center;
-    }
-
-    .flex-wrap {
-      flex-wrap: wrap;
     }
 
     .main-icon {
@@ -137,9 +134,11 @@ html, body {
       button {
         border: solid 2px transparent;
 
-        @media screen and (max-width: 850px) {
+        @media screen and (max-width: 849px) {
           & {
             max-width: 75%;
+            font-size: 1rem;
+
             .icon-image-desc {
               min-width: 155px;
   
@@ -162,23 +161,27 @@ html, body {
           }
         }
 
-        @media screen and (min-width: 851px) {
-          .icon-image-desc {
-            .desc {
-              height: 65px;
+        @media screen and (min-width: 850px) {
+          & {
+            font-size: 1.2rem;
 
-              p {
-                font-size: 1rem;
+            .icon-image-desc {
+              .desc {
+                height: 65px;
 
-                &:first-child {
-                  font-size: 1.2rem;
+                p {
+                  font-size: 1rem;
+
+                  &:first-child {
+                    font-size: 1.2rem;
+                  }
                 }
               }
             }
-          }
 
-          &.sort-girl-btn {
-            margin: 0 50px;
+            &.sort-girl-btn {
+              margin: 0 50px;
+            }
           }
         }
 
@@ -249,13 +252,13 @@ html, body {
 
       .all {
         flex-wrap: wrap;
-        align-content: stretch;
+        flex-direction: row;
         text-align: left;
 
-        .flex {
-          width: 33.33%;
-          flex-grow: 0;
+        .all-girl {
+          flex: 1 1 33.33%;
           justify-content: flex-start;
+          padding: 2px;
 
           > :not(:first-child) {
             padding: 5px 2px;
@@ -263,10 +266,16 @@ html, body {
 
           .ranking {
             color: $theme-pink;
+          }
 
-            & + p {
+          .desc {
+            p {
               margin: 0;
               font-weight: 300;
+
+              &:not(:first-child) {
+                font-size: 0.8rem;
+              }
             }
           }
         }
@@ -275,7 +284,7 @@ html, body {
   }
 
   .footer {
-    background: url(./resources/header.png) center no-repeat;
+    background: url(./resources/header.png) center repeat;
     height: 75px;
   }
 }
