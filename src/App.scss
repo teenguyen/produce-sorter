@@ -79,33 +79,28 @@ html, body {
     }
 
     .main-icon {
-      .icon-image-desc {
-        background-color: $sub-pink;
-        color: $theme-pink;
-        display: inline-block;
-        border-radius: 25px;
+      background-color: $sub-pink;
+      color: $theme-pink;
+      display: inline-block;
+      border-radius: 25px;
 
-        img {
-          max-width: 100%;
-          border-radius: 25px 25px 0 0;
-        }
+      img {
+        max-width: 100%;
+        border-radius: 25px 25px 0 0;
+      }
 
-        .desc {
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          justify-content: center;
-          padding: 10px 5px;
+      .desc {
+        flex-direction: column;
+        padding: 10px 5px;
 
-          p {
-            font-size: 0.8rem;
-            font-weight: 300;
-            margin: 0;
+        p {
+          font-size: 0.8rem;
+          font-weight: 300;
+          margin: 0;
 
-            &:first-child {
-              font-size: 1rem;
-              font-weight: 400;
-            }
+          &:first-child {
+            font-size: 1rem;
+            font-weight: 400;
           }
         }
       }
@@ -139,7 +134,7 @@ html, body {
             max-width: 75%;
             font-size: 1rem;
 
-            .icon-image-desc {
+            .main-icon {
               min-width: 155px;
   
               .desc {
@@ -165,7 +160,7 @@ html, body {
           & {
             font-size: 1.2rem;
 
-            .icon-image-desc {
+            .main-icon {
               .desc {
                 height: 65px;
 
@@ -205,49 +200,14 @@ html, body {
     }
 
     .results {
-      .top3 {
-        flex-wrap: wrap;
-
-        .main-icon {
-          &:first-child {
-            width: 100%;
-          }
-  
-          &:not(:first-child) {
-            max-width: 175px;
-            margin: 10px 25px;
-          }
-
-          .icon-image-desc {
-            border-radius: 35px;
-
-            img {
-              max-width: 50%;
-              max-width: 175px;
-              border-radius: 35px 35px 0 0;
-            }
-          }
+      .top1 {
+        flex: 0 0 200px;
+        .top1-girl {
+          padding: 25px;
         }
       }
 
-      .top12 {
-        flex-wrap: wrap;
-
-        .main-icon {
-          margin: 10px 25px;
-          width: 20%;
-          max-width: 125px;
-
-          .icon-image-desc {
-            border-radius: 25px;
-
-            img {
-              max-width: 25%;
-              max-width: 125px;
-              border-radius: 25px 25px 0 0;
-            }
-          }
-        }
+      .top3 {
       }
 
       .all {
