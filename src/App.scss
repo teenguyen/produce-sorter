@@ -94,13 +94,31 @@ html, body {
         padding: 10px 5px;
 
         p {
-          font-size: 0.8rem;
           font-weight: 300;
           margin: 0;
 
           &:first-child {
-            font-size: 1rem;
             font-weight: 400;
+          }
+        }
+      }
+
+      @media screen and (max-width: 849px) {
+        p {
+          font-size: 0.8rem;
+
+          &:first-child {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      @media screen and (min-width: 850px) {
+        p {
+          font-size: 1rem;
+
+          &:first-child {
+            font-size: 1.2rem;
           }
         }
       }
@@ -130,53 +148,33 @@ html, body {
         border: solid 2px transparent;
 
         @media screen and (max-width: 849px) {
-          & {
-            max-width: 75%;
-            font-size: 1rem;
+          max-width: 75%;
+          font-size: 1rem;
 
-            .main-icon {
-              min-width: 155px;
-  
-              .desc {
-                height: 45px;
-  
-                p {
-                  font-size: 0.8rem;
-  
-                  &:first-child {
-                    font-size: 1rem;
-                  }
-                }
-              }
+          .main-icon {
+            min-width: 155px;
+
+            .desc {
+              height: 45px;
             }
-  
-            &.sort-girl-btn {
-              margin: 0 25px;
-            }
+          }
+
+          &.sort-girl-btn {
+            margin: 0 25px;
           }
         }
 
         @media screen and (min-width: 850px) {
-          & {
-            font-size: 1.2rem;
+          font-size: 1.2rem;
 
-            .main-icon {
-              .desc {
-                height: 65px;
-
-                p {
-                  font-size: 1rem;
-
-                  &:first-child {
-                    font-size: 1.2rem;
-                  }
-                }
-              }
+          .main-icon {
+            .desc {
+              height: 65px;
             }
+          }
 
-            &.sort-girl-btn {
-              margin: 0 50px;
-            }
+          &.sort-girl-btn {
+            margin: 0 50px;
           }
         }
 
@@ -200,14 +198,32 @@ html, body {
     }
 
     .results {
-      .top1 {
-        flex: 0 0 200px;
-        .top1-girl {
+      .top1, .top3 {
+        flex: 1 0 auto;
+        .top1-girl, .top3-girl {
           padding: 25px;
+          width: 150px;
+
+          .main-icon {
+            .desc {
+              height: 65px;
+            }
+          }
         }
       }
 
-      .top3 {
+      .top12 {
+        flex: 1 0 auto;
+        .top1-girl, .top3-girl {
+          padding: 25px;
+          width: 150px;
+
+          .main-icon {
+            .desc {
+              height: 65px;
+            }
+          }
+        }
       }
 
       .all {

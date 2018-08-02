@@ -62,12 +62,20 @@ html, body {
         flex-direction: column;
         padding: 10px 5px; }
         .wrapper .content .main-icon .desc p {
-          font-size: 0.8rem;
           font-weight: 300;
           margin: 0; }
           .wrapper .content .main-icon .desc p:first-child {
-            font-size: 1rem;
             font-weight: 400; }
+      @media screen and (max-width: 849px) {
+        .wrapper .content .main-icon p {
+          font-size: 0.8rem; }
+          .wrapper .content .main-icon p:first-child {
+            font-size: 1rem; } }
+      @media screen and (min-width: 850px) {
+        .wrapper .content .main-icon p {
+          font-size: 1rem; }
+          .wrapper .content .main-icon p:first-child {
+            font-size: 1.2rem; } }
     .wrapper .content .group-picker .start-btn {
       background-color: #ff9dca;
       color: #fff; }
@@ -87,10 +95,6 @@ html, body {
             min-width: 155px; }
             .wrapper .content .sort-picker button .main-icon .desc {
               height: 45px; }
-              .wrapper .content .sort-picker button .main-icon .desc p {
-                font-size: 0.8rem; }
-                .wrapper .content .sort-picker button .main-icon .desc p:first-child {
-                  font-size: 1rem; }
           .wrapper .content .sort-picker button.sort-girl-btn {
             margin: 0 25px; } }
       @media screen and (min-width: 850px) {
@@ -98,10 +102,6 @@ html, body {
           font-size: 1.2rem; }
           .wrapper .content .sort-picker button .main-icon .desc {
             height: 65px; }
-            .wrapper .content .sort-picker button .main-icon .desc p {
-              font-size: 1rem; }
-              .wrapper .content .sort-picker button .main-icon .desc p:first-child {
-                font-size: 1.2rem; }
           .wrapper .content .sort-picker button.sort-girl-btn {
             margin: 0 50px; } }
       .wrapper .content .sort-picker button.sort-girl-btn {
@@ -115,10 +115,20 @@ html, body {
         margin: 5px; }
       .wrapper .content .sort-picker button:hover {
         border: solid 2px #ff50a0; }
-    .wrapper .content .results .top1 {
-      flex: 0 0 200px; }
-      .wrapper .content .results .top1 .top1-girl {
-        padding: 25px; }
+    .wrapper .content .results .top1, .wrapper .content .results .top3 {
+      flex: 1 0 auto; }
+      .wrapper .content .results .top1 .top1-girl, .wrapper .content .results .top1 .top3-girl, .wrapper .content .results .top3 .top1-girl, .wrapper .content .results .top3 .top3-girl {
+        padding: 25px;
+        width: 150px; }
+        .wrapper .content .results .top1 .top1-girl .main-icon .desc, .wrapper .content .results .top1 .top3-girl .main-icon .desc, .wrapper .content .results .top3 .top1-girl .main-icon .desc, .wrapper .content .results .top3 .top3-girl .main-icon .desc {
+          height: 65px; }
+    .wrapper .content .results .top12 {
+      flex: 1 0 auto; }
+      .wrapper .content .results .top12 .top1-girl, .wrapper .content .results .top12 .top3-girl {
+        padding: 25px;
+        width: 150px; }
+        .wrapper .content .results .top12 .top1-girl .main-icon .desc, .wrapper .content .results .top12 .top3-girl .main-icon .desc {
+          height: 65px; }
     .wrapper .content .results .all {
       flex-wrap: wrap;
       flex-direction: row;
