@@ -58,13 +58,13 @@ export default function Result(props) {
 
     return(
         <div className='results'>
-            <div className='flex top1'>{top1}</div>
+            <div className='flex flex-wrap top1'>{top1}</div>
             <br />
-            <div className='flex top3'>{top3}</div>
+            <div className='flex flex-wrap top3'>{top3}</div>
             <br />
-            <div className='flex top12'>{top12}</div>
+            <div className='flex flex-wrap top12'>{top12}</div>
             <br />
-            <div className='flex all'>{all}</div>
+            <div className='flex flex-wrap all'>{all}</div>
         </div>
     );
 }

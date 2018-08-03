@@ -90,8 +90,7 @@ html, body {
       }
 
       .desc {
-        flex-direction: column;
-        padding: 10px 5px;
+        padding: 7px 5px;
 
         p {
           font-weight: 300;
@@ -99,26 +98,6 @@ html, body {
 
           &:first-child {
             font-weight: 400;
-          }
-        }
-      }
-
-      @media screen and (max-width: 849px) {
-        p {
-          font-size: 0.8rem;
-
-          &:first-child {
-            font-size: 1rem;
-          }
-        }
-      }
-
-      @media screen and (min-width: 850px) {
-        p {
-          font-size: 1rem;
-
-          &:first-child {
-            font-size: 1.2rem;
           }
         }
       }
@@ -155,7 +134,15 @@ html, body {
             min-width: 155px;
 
             .desc {
-              height: 45px;
+              height: 40px;
+
+              p {
+                font-size: 0.8rem;
+      
+                &:first-child {
+                  font-size: 1rem;
+                }
+              }
             }
           }
 
@@ -169,7 +156,15 @@ html, body {
 
           .main-icon {
             .desc {
-              height: 65px;
+              height: 45px;
+              
+              p {
+                font-size: 1rem;
+      
+                &:first-child {
+                  font-size: 1.2rem;
+                }
+              }
             }
           }
 
@@ -198,41 +193,47 @@ html, body {
     }
 
     .results {
-      .top1, .top3 {
+      .top1, .top3, .top12 {
         flex: 1 0 auto;
-        .top1-girl, .top3-girl {
-          padding: 25px;
-          width: 150px;
 
-          .main-icon {
-            .desc {
-              height: 65px;
-            }
+        .top1-girl {
+          max-width: 200px;
+          min-width: 150px;
+          padding: 10px;
+
+          .desc {
+            font-size: 1rem;
           }
         }
-      }
 
-      .top12 {
-        flex: 1 0 auto;
-        .top1-girl, .top3-girl {
-          padding: 25px;
-          width: 150px;
+        .top3-girl {
+          max-width: 150px;
+          min-width: 100px;
+          padding: 10px;
 
-          .main-icon {
-            .desc {
-              height: 65px;
-            }
+          .desc {
+            font-size: 0.9rem;
+          }
+        }
+
+        .top12-girl {
+          max-width: 100px;
+          min-width: 50px;
+          padding: 10px;
+
+          .desc {
+            height: 50px;
+            font-size: 0.9rem;
           }
         }
       }
 
       .all {
-        flex-wrap: wrap;
         flex-direction: row;
         text-align: left;
 
         .all-girl {
-          flex: 1 1 33.33%;
+          flex: 1 1 33%;
           justify-content: flex-start;
           padding: 2px;
 
@@ -248,6 +249,7 @@ html, body {
             p {
               margin: 0;
               font-weight: 300;
+              font-size: 0.9rem;
 
               &:not(:first-child) {
                 font-size: 0.8rem;
