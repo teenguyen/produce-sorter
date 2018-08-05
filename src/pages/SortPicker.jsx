@@ -127,7 +127,7 @@ export default class SortPicker extends Component {
             noneGirls: noneGirls,
             progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
             pairCount: pairCount,
-            girl1: g1,
+            girl1: g1.girl,
             girl2: this.props.state.girls[nextGirlIdx],
             nextGirl: nextGirlIdx + 1,
             left: 0,
