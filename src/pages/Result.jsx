@@ -37,11 +37,13 @@ export default function Result(props) {
             for (let j = 0; j < girls[i].length; j++) {
                 all.push(
                     <div className='flex all-girl' key={girls[i][j].name}>
-                        <MiniIcon girl={girls[i][j]} rank={posCount} />
-                        <div className='ranking'>{`${posCount}. `}</div>
-                        <div className='desc'>
-                            <p>{girls[i][j].name}</p>
-                            <p>{girls[i][j].company}</p>
+                        <div className='result-icon'>
+                            <MiniIcon girl={girls[i][j]} rank={posCount} />
+                            <div className='ranking'>{`${posCount}. `}</div>
+                            <div className='desc'>
+                                <p>{girls[i][j].name}</p>
+                                <p>{girls[i][j].company}</p>
+                            </div>
                         </div>
                     </div>
                 );
@@ -55,7 +57,6 @@ export default function Result(props) {
         <div className='results'>
             <div className='flex flex-wrap top12'>{top1}</div>
             <div className='flex flex-wrap top12'>{top12}</div>
-            <br />
             <br />
             <div className='flex flex-wrap all'>{all}</div>
         </div>
