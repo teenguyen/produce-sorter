@@ -24,12 +24,12 @@ export default class GroupPicker extends Component {
     render() {
         let girlList = this.props.state.girls.filter(girl => {
             switch(this.state.currentGroup) {
-                case '1':
-                    return !girl.left
+                case '3':
+                    return !girl.left && !girl.elim1 && !girl.elim2;
                 case '2':
                     return !girl.left && !girl.elim1;
-                // case '3':
-                //     return !girl.left && !girl.elim1 && !girl.elim2;
+                case '1':
+                    return !girl.left
                 case '0':
                 default:
                     return true;

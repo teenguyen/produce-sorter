@@ -34,8 +34,9 @@ html, body {
       color: #ff50a0; }
     .wrapper .content button {
       border: none;
-      padding: 10px 20px;
+      padding: 0.75rem;
       font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
       background-color: #ebebf1; }
@@ -47,6 +48,9 @@ html, body {
       width: 250px;
       font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
       font-size: 1.2rem; }
+      @media screen and (max-width: 300px) {
+        .wrapper .content select {
+          width: auto; } }
     .wrapper .content .sub-text {
       font-size: 0.8rem;
       margin: 0; }
@@ -57,6 +61,7 @@ html, body {
       border-radius: 25px; }
       .wrapper .content .main-icon img {
         max-width: 100%;
+        max-height: 100%;
         border-radius: 25px 25px 0 0; }
       .wrapper .content .main-icon .desc {
         padding: 7px 5px; }
@@ -65,6 +70,8 @@ html, body {
           margin: 0; }
           .wrapper .content .main-icon .desc p:first-child {
             font-weight: 400; }
+    .wrapper .content .progress {
+      margin-top: 25px; }
     .wrapper .content .group-picker .start-btn {
       background-color: #ff9dca;
       color: #fff; }
@@ -72,11 +79,25 @@ html, body {
         outline: 0; }
       .wrapper .content .group-picker .start-btn:hover {
         background-color: #ff50a0; }
-    .wrapper .content .sort-picker .progress {
-      margin-top: 25px; }
     .wrapper .content .sort-picker button {
       border: solid 2px transparent; }
-      @media screen and (max-width: 849px) {
+      @media screen and (max-width: 399px) {
+        .wrapper .content .sort-picker button {
+          max-width: 75%;
+          font-size: 1rem; }
+          .wrapper .content .sort-picker button .main-icon {
+            min-width: 120px; }
+            .wrapper .content .sort-picker button .main-icon .desc {
+              height: 28px; }
+              .wrapper .content .sort-picker button .main-icon .desc p {
+                font-size: 0.6rem; }
+                .wrapper .content .sort-picker button .main-icon .desc p:first-child {
+                  font-size: 0.8rem; }
+          .wrapper .content .sort-picker button.sort-girl-btn {
+            margin: 0 10px; }
+          .wrapper .content .sort-picker button.sort-other-btn {
+            font-size: 0.6rem; } }
+      @media screen and (min-width: 400px) and (max-width: 849px) {
         .wrapper .content .sort-picker button {
           max-width: 75%;
           font-size: 1rem; }
@@ -89,7 +110,9 @@ html, body {
                 .wrapper .content .sort-picker button .main-icon .desc p:first-child {
                   font-size: 1rem; }
           .wrapper .content .sort-picker button.sort-girl-btn {
-            margin: 0 25px; } }
+            margin: 0 20px; }
+          .wrapper .content .sort-picker button.sort-other-btn {
+            font-size: 0.8rem; } }
       @media screen and (min-width: 850px) {
         .wrapper .content .sort-picker button {
           font-size: 1.2rem; }
@@ -100,7 +123,9 @@ html, body {
               .wrapper .content .sort-picker button .main-icon .desc p:first-child {
                 font-size: 1.2rem; }
           .wrapper .content .sort-picker button.sort-girl-btn {
-            margin: 0 50px; } }
+            margin: 0 50px; }
+          .wrapper .content .sort-picker button.sort-other-btn {
+            font-size: 1rem; } }
       .wrapper .content .sort-picker button.sort-girl-btn {
         border-radius: 25px;
         padding: 0;
@@ -112,27 +137,38 @@ html, body {
         margin: 5px; }
       .wrapper .content .sort-picker button:hover {
         border: solid 2px #ff50a0; }
-    .wrapper .content .results .top1, .wrapper .content .results .top3, .wrapper .content .results .top12 {
-      flex: 1 0 auto; }
-      .wrapper .content .results .top1 .top1-girl, .wrapper .content .results .top3 .top1-girl, .wrapper .content .results .top12 .top1-girl {
-        max-width: 200px;
-        min-width: 150px;
-        padding: 10px; }
-        .wrapper .content .results .top1 .top1-girl .desc, .wrapper .content .results .top3 .top1-girl .desc, .wrapper .content .results .top12 .top1-girl .desc {
-          font-size: 1rem; }
-      .wrapper .content .results .top1 .top3-girl, .wrapper .content .results .top3 .top3-girl, .wrapper .content .results .top12 .top3-girl {
+    @media screen and (max-width: 849px) {
+      .wrapper .content .results .top12 .mobile-break {
+        width: 0%; } }
+    @media screen and (min-width: 850px) {
+      .wrapper .content .results .top12 .mobile-break {
+        width: 100%; } }
+    @media screen and (max-width: 639px) {
+      .wrapper .content .results .top12 .top12-girl {
+        width: 285px;
+        min-width: 200px;
+        padding-bottom: 10px; }
+        .wrapper .content .results .top12 .top12-girl .main-icon {
+          display: flex;
+          flex: 1 0 auto;
+          border-radius: 15px; }
+          .wrapper .content .results .top12 .top12-girl .main-icon img {
+            height: 100px;
+            border-radius: 15px 0 0 15px; }
+          .wrapper .content .results .top12 .top12-girl .main-icon .desc {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 15px; } }
+    @media screen and (min-width: 640px) {
+      .wrapper .content .results .top12 .top12-girl {
         max-width: 150px;
-        min-width: 100px;
-        padding: 10px; }
-        .wrapper .content .results .top1 .top3-girl .desc, .wrapper .content .results .top3 .top3-girl .desc, .wrapper .content .results .top12 .top3-girl .desc {
-          font-size: 0.9rem; }
-      .wrapper .content .results .top1 .top12-girl, .wrapper .content .results .top3 .top12-girl, .wrapper .content .results .top12 .top12-girl {
-        max-width: 100px;
         min-width: 50px;
         padding: 10px; }
-        .wrapper .content .results .top1 .top12-girl .desc, .wrapper .content .results .top3 .top12-girl .desc, .wrapper .content .results .top12 .top12-girl .desc {
-          height: 50px;
-          font-size: 0.9rem; }
+        .wrapper .content .results .top12 .top12-girl .desc {
+          height: 40px;
+          font-size: 0.9rem; } }
     .wrapper .content .results .all {
       flex-direction: row;
       text-align: left; }

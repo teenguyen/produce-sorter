@@ -54,8 +54,9 @@ html, body {
 
     button {
       border: none;
-      padding: 10px 20px;
+      padding: 0.75rem;
       font-family: $font-family;
+      font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
       background-color: $bg-grey;
@@ -71,6 +72,10 @@ html, body {
       width: 250px;
       font-family: $font-family;
       font-size: 1.2rem;
+
+      @media screen and (max-width: 300px) {
+        width: auto;
+      }
     }
 
     .sub-text {
@@ -86,6 +91,7 @@ html, body {
 
       img {
         max-width: 100%;
+        max-height: 100%;
         border-radius: 25px 25px 0 0;
       }
 
@@ -101,6 +107,10 @@ html, body {
           }
         }
       }
+    }
+
+    .progress {
+      margin-top: 25px;
     }
 
     .group-picker {
@@ -119,14 +129,38 @@ html, body {
     }
 
     .sort-picker {
-      .progress {
-        margin-top: 25px;
-      }
-
       button {
         border: solid 2px transparent;
 
-        @media screen and (max-width: 849px) {
+        @media screen and (max-width: 399px) {
+          max-width: 75%;
+          font-size: 1rem;
+
+          .main-icon {
+            min-width: 120px;
+            .desc {
+              height: 28px;
+
+              p {
+                font-size: 0.6rem;
+      
+                &:first-child {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+
+          &.sort-girl-btn {
+            margin: 0 10px;
+          }
+
+          &.sort-other-btn {
+            font-size: 0.6rem;
+          }
+        }
+
+        @media screen and (min-width: 400px) and (max-width: 849px) {
           max-width: 75%;
           font-size: 1rem;
 
@@ -147,7 +181,11 @@ html, body {
           }
 
           &.sort-girl-btn {
-            margin: 0 25px;
+            margin: 0 20px;
+          }
+
+          &.sort-other-btn {
+            font-size: 0.8rem;
           }
         }
 
@@ -171,6 +209,10 @@ html, body {
           &.sort-girl-btn {
             margin: 0 50px;
           }
+
+          &.sort-other-btn {
+            font-size: 1rem;
+          }
         }
 
         &.sort-girl-btn {
@@ -193,37 +235,53 @@ html, body {
     }
 
     .results {
-      .top1, .top3, .top12 {
-        flex: 1 0 auto;
-
-        .top1-girl {
-          max-width: 200px;
-          min-width: 150px;
-          padding: 10px;
-
-          .desc {
-            font-size: 1rem;
+      .top12 {
+        // media values based on no ties
+        .mobile-break {
+          @media screen and (max-width: 849px) {
+            width: 0%;
           }
-        }
 
-        .top3-girl {
-          max-width: 150px;
-          min-width: 100px;
-          padding: 10px;
-
-          .desc {
-            font-size: 0.9rem;
+          @media screen and (min-width: 850px) {
+            width: 100%;
           }
         }
 
         .top12-girl {
-          max-width: 100px;
-          min-width: 50px;
-          padding: 10px;
+          @media screen and (max-width: 639px) {
+            width: 285px;
+            min-width: 200px;
+            padding-bottom: 10px;
 
-          .desc {
-            height: 50px;
-            font-size: 0.9rem;
+            .main-icon {
+              display: flex;
+              flex: 1 0 auto;
+              border-radius: 15px;
+
+              img {
+                height: 100px;
+                border-radius: 15px 0 0 15px;
+              }
+
+              .desc {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 15px;
+              }
+            }
+          }
+
+          @media screen and (min-width: 640px) {
+            max-width: 150px;
+            min-width: 50px;
+            padding: 10px;
+  
+            .desc {
+              height: 40px;
+              font-size: 0.9rem;
+            }
           }
         }
       }

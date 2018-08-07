@@ -120,14 +120,14 @@ export default class SortPicker extends Component {
         if (girls.length === 0) {
             girlPicked === NONE ? g1 = this.state.girl1 : g1 = this.state.girl2;
         } else {
-            g1 = this.getMidGirl(girls);
+            g1 = this.getMidGirl(girls).girl;
         }
 
         this.setState({
             noneGirls: noneGirls,
             progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
             pairCount: pairCount,
-            girl1: g1.girl,
+            girl1: g1,
             girl2: this.props.state.girls[nextGirlIdx],
             nextGirl: nextGirlIdx + 1,
             left: 0,
@@ -180,7 +180,7 @@ export default class SortPicker extends Component {
             }
 
             sortPicker = 
-                <div>
+                <div className='sort-picker'>
                     <p>Pair #{this.state.pairCount}</p>
                     <div className='flex flex-center'>
                         <VotingButton content={girl1} className='sort-girl-btn' onClick={() => this.onClick(GIRL1)} />
@@ -200,7 +200,7 @@ export default class SortPicker extends Component {
 
         const progressBarStyle = { width: `${this.state.progress}%` };
         return(
-            <div className='sort-picker'>
+            <div>
                 <div className='progress'>
                     <div className='progress-bar progress-bar-striped active' role='progressbar' style={progressBarStyle}></div>
                 </div>
