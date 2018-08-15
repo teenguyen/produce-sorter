@@ -298,30 +298,45 @@ html, body {
       }
 
       .all {
-        flex-direction: row;
         text-align: left;
 
         .all-girl {
-          flex: 1 1 33%;
-          justify-content: flex-start;
-          padding: 2px;
-
-          > :not(:first-child) {
-            padding: 5px 2px;
+          @media screen and (max-width: 549px) {
+            justify-content: center;
+            .result-icon {
+              width: 235px;
+            }
           }
 
-          .ranking {
-            color: $theme-pink;
+          @media screen and (min-width: 550px) and (max-width: 849px) {
+            justify-content: flex-start;
+            width: 50%;
           }
 
-          .desc {
-            p {
-              margin: 0;
-              font-weight: 300;
-              font-size: 0.9rem;
+          @media screen and (min-width: 850px) {
+            justify-content: flex-start;
+            width: 33%;
+          }
 
-              &:not(:first-child) {
-                font-size: 0.8rem;
+          .result-icon {
+            display: flex;
+            > :not(:first-child) {
+              padding: 5px 2px;
+            }
+  
+            .ranking {
+              color: $theme-pink;
+            }
+  
+            .desc {
+              p {
+                margin: 0;
+                font-weight: 300;
+                font-size: 0.9rem;
+  
+                &:not(:first-child) {
+                  font-size: 0.8rem;
+                }
               }
             }
           }
