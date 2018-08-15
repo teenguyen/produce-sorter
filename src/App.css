@@ -68,7 +68,7 @@ html, body {
         .wrapper .content .main-icon .desc p {
           font-weight: 300;
           margin: 0; }
-          .wrapper .content .main-icon .desc p:first-child {
+          .wrapper .content .main-icon .desc p:not(:last-child) {
             font-weight: 400; }
     .wrapper .content .progress {
       margin-top: 25px; }
@@ -146,21 +146,24 @@ html, body {
     @media screen and (max-width: 639px) {
       .wrapper .content .results .top12 .top12-girl {
         width: 285px;
-        min-width: 200px;
+        min-width: 230px;
         padding-bottom: 10px; }
         .wrapper .content .results .top12 .top12-girl .main-icon {
           display: flex;
           flex: 1 0 auto;
-          border-radius: 15px; }
+          border-radius: 15px;
+          align-items: center; }
           .wrapper .content .results .top12 .top12-girl .main-icon img {
             height: 100px;
             border-radius: 15px 0 0 15px; }
           .wrapper .content .results .top12 .top12-girl .main-icon .desc {
             text-align: left;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
-            padding: 0 15px; } }
+            padding: 0 15px; }
+            .wrapper .content .results .top12 .top12-girl .main-icon .desc p {
+              padding: 0 2px; } }
     @media screen and (min-width: 640px) {
       .wrapper .content .results .top12 .top12-girl {
         max-width: 150px;
@@ -168,7 +171,9 @@ html, body {
         padding: 10px; }
         .wrapper .content .results .top12 .top12-girl .desc {
           height: 40px;
-          font-size: 0.9rem; } }
+          font-size: 0.9rem; }
+          .wrapper .content .results .top12 .top12-girl .desc p:first-child, .wrapper .content .results .top12 .top12-girl .desc div {
+            display: inline; } }
     .wrapper .content .results .all {
       flex-direction: row;
       text-align: left; }
