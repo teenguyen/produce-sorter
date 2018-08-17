@@ -54,6 +54,10 @@ html, body {
     .wrapper .content .sub-text {
       font-size: 0.8rem;
       margin: 0; }
+    .wrapper .content .mini-icon {
+      height: 75px;
+      width: 75px;
+      padding: 5px; }
     .wrapper .content .main-icon {
       background-color: #ffe4f2;
       color: #ff50a0;
