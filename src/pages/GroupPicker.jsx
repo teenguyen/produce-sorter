@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+import { setGroup } from './../actions/actions';
 import MiniIcon from './../components/MiniIcon';
 import { shuffle } from './../util/Functions';
 import { ROUNDS } from './../util/Constants';
 
-export default class GroupPicker extends Component {
+class GroupPicker extends Component {
     constructor(props) {
         super(props);
         const availableGroups = ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
@@ -64,3 +66,5 @@ export default class GroupPicker extends Component {
         );
     }
 }
+
+export default connect()(GroupPicker)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-
+import { updateGirls } from './../actions/actions';
 import './../resources/bootstrap/bootstrap.css';
 import './../resources/bootstrap/bootstrap-theme.css';
 import Result from './Result';
@@ -8,7 +9,7 @@ import VotingButton from './../components/VotingButton';
 import MainIcon from './../components/MainIcon';
 import { GIRL1, GIRL2, TIED, NONE, NONE_FIRST } from './../util/Constants';
 
-export default class SortPicker extends Component {
+class SortPicker extends Component {
     constructor(props) {
         super(props);
         let girl1 = this.props.state.girls[0];
@@ -210,3 +211,5 @@ export default class SortPicker extends Component {
         );
     }
 }
+
+export default connect()(SortPicker)

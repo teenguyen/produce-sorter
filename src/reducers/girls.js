@@ -4,7 +4,6 @@ const girls = (state = [], action) => {
             return [
                 ...state,
                 {
-                    id: action.id,
                     girls: action.girls
                 }
             ];

@@ -4,7 +4,6 @@ const group = (state = [], action) => {
             return [
                 ...state,
                 {
-                    id: action.id,
                     group: action.group
                 }
             ];
