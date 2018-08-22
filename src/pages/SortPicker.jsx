@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { updateGirls } from './../actions/actions';
 import './../resources/bootstrap/bootstrap.css';
 import './../resources/bootstrap/bootstrap-theme.css';
-import Result from './Result';
-import VotingButton from './../components/VotingButton';
-import MainIcon from './../components/MainIcon';
+import ResultContainer from './../containers/ResultContainer';
+import VotingButton from './components/VotingButton';
+import MainIcon from './components/MainIcon';
 import { GIRL1, GIRL2, TIED, NONE, NONE_FIRST } from './../util/Constants';
 
 class SortPicker extends Component {
     constructor(props) {
         super(props);
-        let girl1 = this.props.state.girls[0];
-        let girl2 = this.props.state.girls[1];
+        let girl1 = this.props.girls[0];
+        let girl2 = this.props.girls[1];
 
         this.state = {
             sortedGirls: [],
@@ -105,10 +104,10 @@ class SortPicker extends Component {
 
         this.setState({
             sortedGirls: girls,
-            progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
+            progress: Math.floor((this.state.nextGirl/this.props.girls.length) * 100),
             pairCount: pairCount,
             girl1: midGirl.girl,
-            girl2: this.props.state.girls[nextGirlIdx],
+            girl2: this.props.girls[nextGirlIdx],
             nextGirl: nextGirlIdx + 1,
             left: 0,
             right: girls.length - 1 // we want arr pos, not length
@@ -126,10 +125,10 @@ class SortPicker extends Component {
 
         this.setState({
             noneGirls: noneGirls,
-            progress: Math.floor((this.state.nextGirl/this.props.state.girls.length) * 100),
+            progress: Math.floor((this.state.nextGirl/this.props.girls.length) * 100),
             pairCount: pairCount,
             girl1: g1,
-            girl2: this.props.state.girls[nextGirlIdx],
+            girl2: this.props.girls[nextGirlIdx],
             nextGirl: nextGirlIdx + 1,
             left: 0,
             right: girls.length - 1 // we want arr pos, not length
@@ -165,10 +164,11 @@ class SortPicker extends Component {
 
     render() {
         let sortPicker;
-        if (this.state.nextGirl > this.props.state.girls.length) {
+        if (this.state.nextGirl > this.props.girls.length) {
             let sortedGirls = this.state.sortedGirls;
             sortedGirls.push(this.state.noneGirls);
-            sortPicker = <Result girls={sortedGirls} />
+            this.props.updateGirls(sortedGirls);
+            sortPicker = <ResultContainer />
         } else {
             const girl1 = <MainIcon girl={this.state.girl1} />
             const girl2 = <MainIcon girl={this.state.girl2} />
