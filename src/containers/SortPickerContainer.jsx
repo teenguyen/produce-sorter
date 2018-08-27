@@ -3,7 +3,7 @@ import SortPicker from './../pages/SortPicker';
 
 import { updateGirls } from './../actions/actions';
 
-const mapStateToProps = (state, props) => ({ 
+const mapStateToProps = (state, nextProps) => ({ 
     girls: state.girls
 });
 

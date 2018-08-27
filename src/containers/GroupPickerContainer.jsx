@@ -5,9 +5,10 @@ import GroupPicker from './../pages/GroupPicker';
 import { setGroup , updateGirls } from './../actions/actions';
 import { ROUNDS } from './../util/Constants';
 
-const mapStateToProps = (state, props) => ({
+const availableGroups = ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>)
+const mapStateToProps = (state, nextProps) => ({
     girls: state.girls,
-    availableGroups: ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>),
+    availableGroups: availableGroups,
     currentGroup: state.group
 });
 

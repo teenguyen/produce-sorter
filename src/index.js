@@ -4,17 +4,21 @@ import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
+import { GIRLS } from './util/Girls';
 import './App.css';
-import App from './pages/App';
+import AppContainer from './containers/AppContainer';
 import rootReducer from './reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, {
+    group: '3',
+    girls: GIRLS
+});
 
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
-            <App />
+            <AppContainer />
         </BrowserRouter>
     </Provider>
 ), document.getElementById('root'));

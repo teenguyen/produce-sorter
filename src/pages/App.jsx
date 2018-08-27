@@ -14,8 +14,8 @@ const App = () => (
         </div>
         <div className='content'>
             <Switch>
-                <Route path='/sort' render={() => <GroupPickerContainer />} />
-                <Route render={() => <SortPickerContainer />} />
+                <Route path='/sort' component={SortPickerContainer} />
+                <Route component={GroupPickerContainer} />
             </Switch>
         </div>
         <div className='footer' />

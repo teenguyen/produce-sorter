@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Result from './../pages/Result';
 
-const mapStateToProps = (state, props) => ({ 
+const mapStateToProps = (state, nextProps) => ({ 
     girls: state.girls
 });
 
