@@ -3,9 +3,9 @@ import React from 'react';
 import MainIcon from './components/MainIcon';
 import MiniIcon from './components/MiniIcon';
 
-const Result = () => {
+const Result = (props) => {
     let posCount = 1;
-    let girls = this.props.girls;
+    let girls = props.girls;
     let top1 = [];
     let top12 = [];
     let all = [];
