@@ -165,7 +165,9 @@ export default class SortPicker extends Component {
         let sortPicker;
         if (this.state.nextGirl > this.props.girls.length) {
             let sortedGirls = this.state.sortedGirls;
-            sortedGirls.push(this.state.noneGirls);
+            if (this.state.noneGirls.length > 0) {
+                sortedGirls.push(this.state.noneGirls);
+            }
             this.props.updateGirls(sortedGirls);
             sortPicker = <ResultContainer />
         } else {

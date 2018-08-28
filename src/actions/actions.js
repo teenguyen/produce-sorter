@@ -6,4 +6,4 @@ export const updateGirls = girls => ({
 export const setGroup = group => ({
     type: 'SET_GROUP',
     group
-})
+});
