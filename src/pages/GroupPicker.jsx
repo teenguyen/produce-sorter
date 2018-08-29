@@ -42,7 +42,7 @@ export default class GroupPicker extends Component {
             <div className='group-picker'>
                 <h2>Welcome to the PRODUCE 48 Sorter</h2>
                 <p className='sub-text'>For best results, avoid picking tied.</p> 
-                <p className='sub-text'>Girls that fall into none will be removed from the sort and added to the bottom of your results.</p>
+                <p className='sub-text'>Girls that fall into no opinion will be removed from the sort and added to the bottom of your results.</p>
                 <p className='sub-text'>Please <a href='https://github.com/RYUUSEiiSTAR/produce48-sorter/issues' alt='Github issues page for PRODUCE48-SORTER'>report any issues here</a></p>
                 <br />
                 <select value={this.props.currentGroup} onChange={this.onChange}>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './../resources/bootstrap/bootstrap.css';
 import './../resources/bootstrap/bootstrap-theme.css';
-import ResultContainer from './../containers/ResultContainer';
+import Result from './sortPicker/Result';
 import VotingButton from './components/VotingButton';
 import MainIcon from './components/MainIcon';
 import { GIRL1, GIRL2, TIED, NONE, NONE_FIRST } from './../util/Constants';
@@ -168,8 +168,7 @@ export default class SortPicker extends Component {
             if (this.state.noneGirls.length > 0) {
                 sortedGirls.push(this.state.noneGirls);
             }
-            this.props.updateGirls(sortedGirls);
-            sortPicker = <ResultContainer />
+            sortPicker = <Result girls={sortedGirls} />
         } else {
             const girl1 = <MainIcon girl={this.state.girl1} />
             const girl2 = <MainIcon girl={this.state.girl2} />

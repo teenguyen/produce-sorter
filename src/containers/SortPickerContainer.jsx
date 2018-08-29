@@ -1,15 +1,11 @@
 import { connect } from 'react-redux';
 import SortPicker from './../pages/SortPicker';
 
-import { updateGirls } from './../actions/actions';
-
 const mapStateToProps = (state, nextProps) => ({ 
     girls: state.girls
 });
 
-const mapDispatchToProps = { 
-    updateGirls
-};
+const mapDispatchToProps = { };
 
 const SortPickerContainer = connect(
     mapStateToProps,

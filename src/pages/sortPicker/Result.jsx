@@ -1,9 +1,9 @@
 import React from 'react';
 
-import MainIcon from './components/MainIcon';
-import MiniIcon from './components/MiniIcon';
+import MainIcon from '../components/MainIcon';
+import MiniIcon from '../components/MiniIcon';
 
-const Result = (props) => {
+export default function Result(props) {
     let posCount = 1;
     let girls = props.girls;
     let top1 = [];
@@ -62,5 +62,3 @@ const Result = (props) => {
         </div>
     );
 }
-
-export default Result;
