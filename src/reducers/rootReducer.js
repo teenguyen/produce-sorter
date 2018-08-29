@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
 
-const girls = (state = {}, action) => {
+const trainees = (state = {}, action) => {
     switch(action.type) {
-        case 'UPDATE_GIRLS':
-            return action.girls;
+        case 'UPDATE_TRAINEES':
+            return action.trainees;
         default:
             return state;
     }
 }
 
-const group = (state = '0', action) => {
+const group = (state = {}, action) => {
     switch(action.type) {
         case 'SET_GROUP':
             return action.group;
@@ -18,7 +18,17 @@ const group = (state = '0', action) => {
     }
 }
 
+const season = (state = {}, action) => {
+    switch(action.type) {
+        case 'SET_SEASON':
+            return action.season;
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    girls,
-    group
+    trainees,
+    group,
+    season
 });

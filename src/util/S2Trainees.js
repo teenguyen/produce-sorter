@@ -1,0 +1,1 @@
+export const S2Trainees = [];

@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import App from './../pages/App';
 
 const mapStateToProps = (state, nextProps) => ({
+    season: state.season,
     group: state.group,
-    girls: state.girls
+    trainees: state.trainees
 });
 
 const mapDispatchToProps = { };

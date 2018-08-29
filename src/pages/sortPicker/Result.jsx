@@ -5,27 +5,27 @@ import MiniIcon from '../components/MiniIcon';
 
 export default function Result(props) {
     let posCount = 1;
-    let girls = props.girls;
+    let trainees = props.trainees;
     let top1 = [];
     let top12 = [];
     let all = [];
     let top5Break = false;
 
-    for (let i = 0; i < girls.length; i++) {
+    for (let i = 0; i < trainees.length; i++) {
         let count = 0;
         if (i === 0) {
-            for (let j = 0; j < girls[i].length; j++) {
+            for (let j = 0; j < trainees[i].length; j++) {
                 top1.push(
-                    <div className='top12-girl' key={girls[i][j].name}>
-                        <MainIcon girl={girls[i][j]} rank={posCount} />
+                    <div className='top12-trainee' key={trainees[i][j].name}>
+                        <MainIcon trainee={trainees[i][j]} rank={posCount} />
                     </div>);
                 count++;
             }
         } else if (top1.length + top12.length < 13) { 
-            for (let j = 0; j < girls[i].length; j++) {
+            for (let j = 0; j < trainees[i].length; j++) {
                 top12.push(
-                    <div className='top12-girl' key={girls[i][j].name}>
-                        <MainIcon girl={girls[i][j]} rank={posCount} />
+                    <div className='top12-trainee' key={trainees[i][j].name}>
+                        <MainIcon trainee={trainees[i][j]} rank={posCount} />
                     </div>);
                 count++;
             }
@@ -34,15 +34,15 @@ export default function Result(props) {
                 top5Break = true;
             }
         } else {
-            for (let j = 0; j < girls[i].length; j++) {
+            for (let j = 0; j < trainees[i].length; j++) {
                 all.push(
-                    <div className='flex all-girl' key={girls[i][j].name}>
+                    <div className='flex all-trainee' key={trainees[i][j].name}>
                         <div className='result-icon'>
-                            <MiniIcon girl={girls[i][j]} rank={posCount} />
+                            <MiniIcon trainee={trainees[i][j]} rank={posCount} />
                             <div className='ranking'>{`${posCount}. `}</div>
                             <div className='desc'>
-                                <p>{girls[i][j].name}</p>
-                                <p>{girls[i][j].company}</p>
+                                <p>{trainees[i][j].name}</p>
+                                <p>{trainees[i][j].company}</p>
                             </div>
                         </div>
                     </div>

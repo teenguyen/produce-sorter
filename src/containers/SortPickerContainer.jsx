@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import SortPicker from './../pages/SortPicker';
 
 const mapStateToProps = (state, nextProps) => ({ 
-    girls: state.girls
+    trainees: state.trainees
 });
 
 const mapDispatchToProps = { };

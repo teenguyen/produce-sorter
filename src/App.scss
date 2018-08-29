@@ -39,7 +39,7 @@ html, body {
   }
 
   .header {
-    background: url(./resources/header.png) center repeat;
+    background: url(./resources/s3/header.png) center repeat;
     height: 250px;
   }
 
@@ -157,7 +157,7 @@ html, body {
             }
           }
 
-          &.sort-girl-btn {
+          &.sort-trainee-btn {
             margin: 0 10px;
           }
 
@@ -186,7 +186,7 @@ html, body {
             }
           }
 
-          &.sort-girl-btn {
+          &.sort-trainee-btn {
             margin: 0 20px;
           }
 
@@ -212,7 +212,7 @@ html, body {
             }
           }
 
-          &.sort-girl-btn {
+          &.sort-trainee-btn {
             margin: 0 50px;
           }
 
@@ -221,7 +221,7 @@ html, body {
           }
         }
 
-        &.sort-girl-btn {
+        &.sort-trainee-btn {
           border-radius: 25px;
           padding: 0;
           background-color: transparent;
@@ -253,7 +253,7 @@ html, body {
           }
         }
 
-        .top12-girl {
+        .top12-trainee {
           @media screen and (max-width: 639px) {
             width: 285px;
             min-width: 230px;
@@ -306,7 +306,7 @@ html, body {
       .all {
         text-align: left;
 
-        .all-girl {
+        .all-trainee {
           @media screen and (max-width: 549px) {
             justify-content: center;
             .result-icon {
@@ -352,7 +352,7 @@ html, body {
   }
 
   .footer {
-    background: url(./resources/header.png) center repeat;
+    background: url(./resources/s3/header.png) center repeat;
     height: 75px;
   }
 }

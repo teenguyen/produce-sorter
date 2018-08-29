@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import GroupPicker from './../pages/GroupPicker';
 
-import { setGroup , updateGirls } from './../actions/actions';
+import { setSeason, setGroup , updateTrainees } from './../actions/actions';
 const mapStateToProps = (state, nextProps) => ({
-    girls: state.girls,
-    currentGroup: state.group
+    currentSeason: state.season,
+    currentGroup: state.group,
+    trainees: state.updateTrainees
 });
 
 const mapDispatchToProps = {
+    setSeason,
     setGroup,
-    updateGirls
+    updateTrainees
 };
 
 const GroupPickerContainer = connect(

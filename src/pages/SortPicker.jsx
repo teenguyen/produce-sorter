@@ -5,178 +5,178 @@ import './../resources/bootstrap/bootstrap-theme.css';
 import Result from './sortPicker/Result';
 import VotingButton from './components/VotingButton';
 import MainIcon from './components/MainIcon';
-import { GIRL1, GIRL2, TIED, NONE, NONE_FIRST } from './../util/Constants';
+import { TRAINEE1, TRAINEE2, TIED, NONE, NONE_FIRST } from './../util/Constants';
 
 export default class SortPicker extends Component {
     constructor(props) {
         super(props);
-        let girl1 = this.props.girls[0];
-        let girl2 = this.props.girls[1];
+        let trainee1 = this.props.trainees[0];
+        let trainee2 = this.props.trainees[1];
 
         this.state = {
-            sortedGirls: [],
-            noneGirls: [],
+            sortedTrainees: [],
+            noneTrainees: [],
             pairCount: 1,
             progress: 0,
-            girl1: girl1,
-            girl2: girl2,
-            nextGirl: 2,
+            trainee1: trainee1,
+            trainee2: trainee2,
+            nextTrainee: 2,
             left: 0,
             right: 0
         }
 
         this.onClick = this.onClick.bind(this);
-        this.setNewGirls = this.setNewGirls.bind(this);
-        this.setNoneGirls = this.setNoneGirls.bind(this);
+        this.setNewTrainees = this.setNewTrainees.bind(this);
+        this.setNoneTrainees = this.setNoneTrainees.bind(this);
         this.getIndex = this.getIndex.bind(this);
-        this.getMidGirl = this.getMidGirl.bind(this);
+        this.getMidTrainee = this.getMidTrainee.bind(this);
     }
 
     onClick(opt) {
-        let girls = this.state.sortedGirls.slice();
-        let noneGirls = this.state.noneGirls.slice();
+        let trainees = this.state.sortedTrainees.slice();
+        let noneTrainees = this.state.noneTrainees.slice();
         let pairCount = this.state.pairCount;
         pairCount++;
         let left = this.state.left;
         let right = this.state.right;
-        let g1 = this.getIndex(this.state.girl1);
+        let g1 = this.getIndex(this.state.trainee1);
 
         switch(opt) {
-            case GIRL1:
+            case TRAINEE1:
                 left = g1;
-                if (girls.length === 0) {
-                    girls.push([this.state.girl1], [this.state.girl2]);
-                    this.setNewGirls(girls, pairCount);
+                if (trainees.length === 0) {
+                    trainees.push([this.state.trainee1], [this.state.trainee2]);
+                    this.setNewTrainees(trainees, pairCount);
                 } else if (right - left === 0) {
-                    girls.splice(left + 1, 0, [ this.state.girl2 ]);
-                    this.setNewGirls(girls, pairCount);
+                    trainees.splice(left + 1, 0, [ this.state.trainee2 ]);
+                    this.setNewTrainees(trainees, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, GIRL1, left, right);
+                    const midTrainee = this.getMidTrainee(trainees, TRAINEE1, left, right);
                     this.setState({
                         pairCount: pairCount,
-                        girl1: midGirl.girl,
-                        left: midGirl.idx
+                        trainee1: midTrainee.trainee,
+                        left: midTrainee.idx
                     });
                 }
                 break;
-            case GIRL2:
+            case TRAINEE2:
                 right = g1;
-                if (girls.length === 0) {
-                    girls.push([this.state.girl2], [this.state.girl1]);
-                    this.setNewGirls(girls, pairCount);
+                if (trainees.length === 0) {
+                    trainees.push([this.state.trainee2], [this.state.trainee1]);
+                    this.setNewTrainees(trainees, pairCount);
                 } else if (right - left === 0) {
-                    girls.splice(left, 0, [ this.state.girl2 ]);
-                    this.setNewGirls(girls, pairCount);
+                    trainees.splice(left, 0, [ this.state.trainee2 ]);
+                    this.setNewTrainees(trainees, pairCount);
                 } else {
-                    const midGirl = this.getMidGirl(girls, GIRL2, left, right);
+                    const midTrainee = this.getMidTrainee(trainees, TRAINEE2, left, right);
                     this.setState({
                         pairCount: pairCount,
-                        girl1: midGirl.girl,
-                        right: midGirl.idx
+                        trainee1: midTrainee.trainee,
+                        right: midTrainee.idx
                     });
                 }
                 break;
             case TIED:
-                if (girls.length === 0) {
-                    girls.push([this.state.girl1, this.state.girl2])
+                if (trainees.length === 0) {
+                    trainees.push([this.state.trainee1, this.state.trainee2])
                 } else {
-                    girls[g1].push(this.state.girl2);
+                    trainees[g1].push(this.state.trainee2);
                 }
-                this.setNewGirls(girls, pairCount);
+                this.setNewTrainees(trainees, pairCount);
                 break;
             case NONE:
-                noneGirls.push(this.state.girl2);
-                this.setNoneGirls(girls, noneGirls, pairCount, NONE);
+                noneTrainees.push(this.state.trainee2);
+                this.setNoneTrainees(trainees, noneTrainees, pairCount, NONE);
                 break;
             case NONE_FIRST:
-                noneGirls.push(this.state.girl1)
-                this.setNoneGirls(girls, noneGirls, pairCount, NONE_FIRST);
+                noneTrainees.push(this.state.trainee1)
+                this.setNoneTrainees(trainees, noneTrainees, pairCount, NONE_FIRST);
                 break;
             default:
                 break;
         }
     }
 
-    setNewGirls(girls, pairCount) {
-        const midGirl = this.getMidGirl(girls);
-        let nextGirlIdx = this.state.nextGirl;
+    setNewTrainees(trainees, pairCount) {
+        const midTrainee = this.getMidTrainee(trainees);
+        let nextTraineeIdx = this.state.nextTrainee;
 
         this.setState({
-            sortedGirls: girls,
-            progress: Math.floor((this.state.nextGirl/this.props.girls.length) * 100),
+            sortedTrainees: trainees,
+            progress: Math.floor((this.state.nextTrainee/this.props.trainees.length) * 100),
             pairCount: pairCount,
-            girl1: midGirl.girl,
-            girl2: this.props.girls[nextGirlIdx],
-            nextGirl: nextGirlIdx + 1,
+            trainee1: midTrainee.trainee,
+            trainee2: this.props.trainees[nextTraineeIdx],
+            nextTrainee: nextTraineeIdx + 1,
             left: 0,
-            right: girls.length - 1 // we want arr pos, not length
+            right: trainees.length - 1 // we want arr pos, not length
         });
     }
 
-    setNoneGirls(girls, noneGirls, pairCount, girlPicked) {
-        let nextGirlIdx = this.state.nextGirl;
+    setNoneTrainees(trainees, noneTrainees, pairCount, traineePicked) {
+        let nextTraineeIdx = this.state.nextTrainee;
         let g1;
-        if (girls.length === 0) {
-            girlPicked === NONE ? g1 = this.state.girl1 : g1 = this.state.girl2;
+        if (trainees.length === 0) {
+            traineePicked === NONE ? g1 = this.state.trainee1 : g1 = this.state.trainee2;
         } else {
-            g1 = this.getMidGirl(girls).girl;
+            g1 = this.getMidTrainee(trainees).trainee;
         }
 
         this.setState({
-            noneGirls: noneGirls,
-            progress: Math.floor((this.state.nextGirl/this.props.girls.length) * 100),
+            noneTrainees: noneTrainees,
+            progress: Math.floor((this.state.nextTrainee/this.props.trainees.length) * 100),
             pairCount: pairCount,
-            girl1: g1,
-            girl2: this.props.girls[nextGirlIdx],
-            nextGirl: nextGirlIdx + 1,
+            trainee1: g1,
+            trainee2: this.props.trainees[nextTraineeIdx],
+            nextTrainee: nextTraineeIdx + 1,
             left: 0,
-            right: girls.length - 1 // we want arr pos, not length
+            right: trainees.length - 1 // we want arr pos, not length
         });
     }
 
-    getIndex(girl) {
-        const girls = this.state.sortedGirls
-        for(let i = 0; i < girls.length; i++) {
-            for (let j = 0; j < girls[i].length; j++) {
-                if (girl.name === girls[i][j].name) {
+    getIndex(trainee) {
+        const trainees = this.state.sortedTrainees
+        for(let i = 0; i < trainees.length; i++) {
+            for (let j = 0; j < trainees[i].length; j++) {
+                if (trainee.name === trainees[i][j].name) {
                     return i;
                 }
             }
         }
     }
 
-    getMidGirl(girls, girlPicked = null, left = null, right = null) {
+    getMidTrainee(trainees, traineePicked = null, left = null, right = null) {
         if (left === null && right === null) {
             left = 0;
-            right = girls.length - 1; // we want arr pos, not length
+            right = trainees.length - 1; // we want arr pos, not length
         }
 
         let midIdx;
-        if (girlPicked === GIRL1) {
+        if (traineePicked === TRAINEE1) {
             midIdx = Math.ceil((left + right) / 2);
         } else {
             midIdx = Math.floor((left + right) / 2);
         }
-        const midGirl = { idx: midIdx, girl: girls[midIdx][0] };
-        return midGirl;
+        const midTrainee = { idx: midIdx, trainee: trainees[midIdx][0] };
+        return midTrainee;
     }
 
     render() {
         let sortPicker;
-        if (this.state.nextGirl > this.props.girls.length) {
-            let sortedGirls = this.state.sortedGirls;
-            if (this.state.noneGirls.length > 0) {
-                sortedGirls.push(this.state.noneGirls);
+        if (this.state.nextTrainee > this.props.trainees.length) {
+            let sortedTrainees = this.state.sortedTrainees;
+            if (this.state.noneTrainees.length > 0) {
+                sortedTrainees.push(this.state.noneTrainees);
             }
-            sortPicker = <Result girls={sortedGirls} />
+            sortPicker = <Result trainees={sortedTrainees} />
         } else {
-            const girl1 = <MainIcon girl={this.state.girl1} />
-            const girl2 = <MainIcon girl={this.state.girl2} />
+            const trainee1 = <MainIcon trainee={this.state.trainee1} />
+            const trainee2 = <MainIcon trainee={this.state.trainee2} />
             let firstPick = null;
-            if (this.state.sortedGirls.length === 0) {
+            if (this.state.sortedTrainees.length === 0) {
                 firstPick = 
                 <div>
-                    <VotingButton content={`No Opinion of ${this.state.girl1.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE_FIRST)} />
+                    <VotingButton content={`No Opinion of ${this.state.trainee1.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE_FIRST)} />
                 </div>
             }
 
@@ -184,9 +184,9 @@ export default class SortPicker extends Component {
                 <div className='sort-picker'>
                     <p>Pair #{this.state.pairCount}</p>
                     <div className='flex flex-center'>
-                        <VotingButton content={girl1} className='sort-girl-btn' onClick={() => this.onClick(GIRL1)} />
+                        <VotingButton content={trainee1} className='sort-trainee-btn' onClick={() => this.onClick(TRAINEE1)} />
                         <p>vs</p>
-                        <VotingButton content={girl2} className='sort-girl-btn' onClick={() => this.onClick(GIRL2)} />
+                        <VotingButton content={trainee2} className='sort-trainee-btn' onClick={() => this.onClick(TRAINEE2)} />
                     </div>
                     <br />
                     <div>
@@ -194,7 +194,7 @@ export default class SortPicker extends Component {
                     </div>
                     {firstPick}
                     <div>
-                        <VotingButton content={`No Opinion of ${this.state.girl2.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE)} />
+                        <VotingButton content={`No Opinion of ${this.state.trainee2.name}`} className='sort-other-btn' onClick={() => this.onClick(NONE)} />
                     </div>
                 </div>
         }

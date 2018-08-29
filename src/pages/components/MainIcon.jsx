@@ -8,12 +8,12 @@ export default function MainIcon(props) {
     
     return(
         <div className='main-icon'>
-            <img src={props.girl.img} alt={props.girl.name} />
+            <img src={props.trainee.img} alt={props.trainee.name} />
             <div className='desc'>
                 {ranking}
                 <div>
-                    <p>{props.girl.name}</p>
-                    <p>{props.girl.company}</p>
+                    <p>{props.trainee.name}</p>
+                    <p>{props.trainee.company}</p>
                 </div>
             </div>
         </div>

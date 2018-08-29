@@ -4,15 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import { GIRLS } from './util/Girls';
+import { S3Trainees } from './util/S3Trainees';
 import './App.css';
 import AppContainer from './containers/AppContainer';
 import rootReducer from './reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(rootReducer, {
-    group: '3',
-    girls: GIRLS
+    season: '3',
+    group: '4',
+    trainees: S3Trainees
 });
 
 ReactDOM.render((
