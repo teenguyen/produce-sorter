@@ -55,6 +55,8 @@ export default class GroupPicker extends Component {
     render() {
         let traineeList = this.props.trainees.filter(trainee => {
             switch(this.props.currentGroup) {
+                case '5':
+                    return !trainee.left && !trainee.elim1 && !trainee.elim2 && !trainee.elim3 && !trainee.final;
                 case '4':
                     return !trainee.left && !trainee.elim1 && !trainee.elim2 && !trainee.elim3;
                 case '3':

@@ -23,7 +23,7 @@ export const S2ROUNDS = [
 ];
 
 export const S3ROUNDS = [
-    { key:5, name:'Final Lineup (12)' },
+    { key:5, name:'IZ*ONE (12)' },
     { key:4, name:'Elimination 3 (20)' },
     { key:3, name:'Elimination 2 (30)' },
     { key:2, name:'Elimination 1 (58)' },
