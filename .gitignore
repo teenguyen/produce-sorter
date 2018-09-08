@@ -16,8 +16,6 @@
 .env.test.local
 .env.production.local
 *.css
-*.png
-*.jpg
 
 
 npm-debug.log*
