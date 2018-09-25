@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-$theme-pink: #ff50a0;
-$sub-pink: #ffe4f2;
+$theme-s1: #ff1868;
+$theme-s2: #0565eb;
+$theme-s3: #ff50a0;
 $bg-grey: #ebebf1;
 $white: #fff;
 $black: #333;
@@ -39,18 +40,49 @@ html, body {
   }
 
   .header {
-    background: url(./resources/s3/header.png) center repeat;
     height: 250px;
+  }
+
+  .bg-s1 {
+    background: url(./resources/s1/header.png) center repeat;
+  }
+
+  .bg-s2 {
+    background: url(./resources/s2/header.png) center repeat;
+  }
+
+  .bg-s3 {
+    background: url(./resources/s3/header.png) center repeat;
+  }
+
+  .color-s1 {
+    color: $theme-s1;
+  }
+
+  .color-s2 {
+    color: $theme-s2;
+  }
+
+  .color-s3 {
+    color: $theme-s3;
+  }
+
+  .bg-color-30-s1 {
+    background-color: lighten($theme-s1, 30%);
+  }
+
+  .bg-color-30-s2 {
+    background-color: lighten($theme-s2, 30%);
+  }
+
+  .bg-color-30-s3 {
+    background-color: lighten($theme-s3, 30%);
   }
 
   .content {
     flex-grow: 1;
     padding: 10px 10vw 100px;
     text-align: center;
-
-    a {
-      color: $theme-pink;
-    }
 
     button {
       border: none;
@@ -67,11 +99,25 @@ html, body {
     }
 
     select {
-      border: solid 3px $theme-pink;
+      border-width: 3px;
+      border-style: solid;
       color: $black;
+      margin: 2px;
       width: 250px;
       font-family: $font-family;
       font-size: 1.2rem;
+
+      &.select-s1 {
+        border-color: $theme-s1;
+      }
+
+      &.select-s2 {
+        border-color: $theme-s2;
+      }
+
+      &.select-s3 {
+        border-color: $theme-s3;
+      }
 
       @media screen and (max-width: 300px) {
         width: auto;
@@ -90,8 +136,6 @@ html, body {
     }
     
     .main-icon {
-      background-color: $sub-pink;
-      color: $theme-pink;
       display: inline-block;
       border-radius: 25px;
 
@@ -121,15 +165,34 @@ html, body {
 
     .group-picker {
       .start-btn {
-        background-color: lighten($theme-pink, 15%);
         color: $white;
+        
+        &.start-btn-s1 {
+          background-color: lighten($theme-s1, 15%);
+  
+          &:hover {
+            background-color: $theme-s1
+          }
+        }
+
+        &.start-btn-s2 {
+          background-color: lighten($theme-s2, 15%);
+  
+          &:hover {
+            background-color: $theme-s2
+          }
+        }
+
+        &.start-btn-s3 {
+          background-color: lighten($theme-s3, 15%);
+  
+          &:hover {
+            background-color: $theme-s3
+          }
+        }
   
         &:focus {
           outline: 0;
-        }
-  
-        &:hover {
-          background-color: $theme-pink
         }
       }
     }
@@ -235,7 +298,7 @@ html, body {
         }
 
         &:hover {
-          border: solid 2px $theme-pink;
+          border: solid 2px $theme-s3;
         }
       }
     }
@@ -331,7 +394,7 @@ html, body {
             }
   
             .ranking {
-              color: $theme-pink;
+              color: $theme-s3;
             }
   
             .desc {
@@ -352,7 +415,6 @@ html, body {
   }
 
   .footer {
-    background: url(./resources/s3/header.png) center repeat;
     height: 75px;
   }
 }

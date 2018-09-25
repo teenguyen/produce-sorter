@@ -1,6 +1,6 @@
 {
-  "name": "produce48-sorter",
-  "homepage": "http://theresa-nguyen.com/produce48-sorter",
+  "name": "produce-sorter",
+  "homepage": "http://theresa-nguyen.com/produce-sorter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

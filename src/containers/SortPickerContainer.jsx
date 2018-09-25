@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import SortPicker from './../pages/SortPicker';
 
 const mapStateToProps = (state, nextProps) => ({ 
+    currentSeason: state.season,
     trainees: state.trainees
 });
 

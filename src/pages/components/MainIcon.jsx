@@ -7,7 +7,7 @@ export default function MainIcon(props) {
     }
     
     return(
-        <div className='main-icon'>
+        <div className={`main-icon color-s${props.season} bg-color-30-s${props.season}`}>
             <img src={props.trainee.img} alt={props.trainee.name} />
             <div className='desc'>
                 {ranking}

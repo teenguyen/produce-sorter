@@ -4,7 +4,7 @@ export const SEASONS = [
     { key:3, name:'PRODUCE 48 S3' }
 ];
 
-export const S1ROUNDS = [
+export const ROUNDS1 = [
     { key:5, name:'I.O.I (11)' },
     { key:4, name:'Elimination 3 (22)' },
     { key:3, name:'Elimination 2 (35)' },
@@ -13,7 +13,7 @@ export const S1ROUNDS = [
     { key:0, name:'All Girls (101)' }
 ];
 
-export const S2ROUNDS = [
+export const ROUNDS2 = [
     { key:4, name:'WANNA ONE (11)' },
     { key:3, name:'Elimination 3 (20)' },
     { key:3, name:'Elimination 2 (35)' },
@@ -22,7 +22,7 @@ export const S2ROUNDS = [
     { key:0, name:'All Boys (101)' }
 ];
 
-export const S3ROUNDS = [
+export const ROUNDS3 = [
     { key:5, name:'IZ*ONE (12)' },
     { key:4, name:'Elimination 3 (20)' },
     { key:3, name:'Elimination 2 (30)' },

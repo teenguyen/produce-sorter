@@ -17,7 +17,7 @@ export default function Result(props) {
             for (let j = 0; j < trainees[i].length; j++) {
                 top1.push(
                     <div className='top12-trainee' key={trainees[i][j].name}>
-                        <MainIcon trainee={trainees[i][j]} rank={posCount} />
+                        <MainIcon trainee={trainees[i][j]} rank={posCount} season={props.currentSeason} />
                     </div>);
                 count++;
             }
@@ -25,7 +25,7 @@ export default function Result(props) {
             for (let j = 0; j < trainees[i].length; j++) {
                 top12.push(
                     <div className='top12-trainee' key={trainees[i][j].name}>
-                        <MainIcon trainee={trainees[i][j]} rank={posCount} />
+                        <MainIcon trainee={trainees[i][j]} rank={posCount} season={props.currentSeason} />
                     </div>);
                 count++;
             }

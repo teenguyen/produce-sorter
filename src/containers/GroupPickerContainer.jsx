@@ -5,7 +5,7 @@ import { setSeason, setGroup , updateTrainees } from './../actions/actions';
 const mapStateToProps = (state, nextProps) => ({
     currentSeason: state.season,
     currentGroup: state.group,
-    trainees: state.updateTrainees
+    trainees: state.trainees
 });
 
 const mapDispatchToProps = {

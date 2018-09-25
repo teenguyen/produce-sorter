@@ -170,8 +170,8 @@ export default class SortPicker extends Component {
             }
             sortPicker = <Result trainees={sortedTrainees} />
         } else {
-            const trainee1 = <MainIcon trainee={this.state.trainee1} />
-            const trainee2 = <MainIcon trainee={this.state.trainee2} />
+            const trainee1 = <MainIcon trainee={this.state.trainee1} season={this.props.currentSeason} />
+            const trainee2 = <MainIcon trainee={this.state.trainee2} season={this.props.currentSeason} />
             let firstPick = null;
             if (this.state.sortedTrainees.length === 0) {
                 firstPick = 

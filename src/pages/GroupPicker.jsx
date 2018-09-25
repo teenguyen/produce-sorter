@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import MiniIcon from './components/MiniIcon';
 import { shuffle } from './../util/Functions';
-import { SEASONS, S1ROUNDS, S2ROUNDS, S3ROUNDS } from './../util/Constants';
-import { S1Trainees } from './../util/S1Trainees';
-import { S2Trainees } from './../util/S2Trainees';
-import { S3Trainees } from './../util/S3Trainees';
+import { SEASONS, ROUNDS1, ROUNDS2, ROUNDS3 } from './../util/Constants';
+import { traineesS1 } from './../util/TraineesS1';
+import { traineesS2 } from './../util/TraineesS2';
+import { traineesS3 } from './../util/TraineesS3';
 
 export default class GroupPicker extends Component {
     constructor(props) {
@@ -14,34 +14,35 @@ export default class GroupPicker extends Component {
         const availableSeasons = SEASONS.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
         this.state = {
             availableSeasons: availableSeasons,
-            availableGroups: S3ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>)
+            availableGroups: ROUNDS3.map(group => <option key={group.key} value={group.key}>{group.name}</option>)
         }
         this.onChangeSeason = this.onChangeSeason.bind(this);
         this.onChangeGroup = this.onChangeGroup.bind(this);
     }
 
     onChangeSeason(event) {
-        const s1Groups = S1ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
-        const s2Groups = S2ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
-        const s3Groups = S3ROUNDS.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
+        const groupS1 = ROUNDS1.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
+        const groupS2 = ROUNDS2.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
+        const groupS3 = ROUNDS3.map(group => <option key={group.key} value={group.key}>{group.name}</option>);
+        this.props.setGroup('5');
         switch(event.target.value) {
             case '1':
-                this.props.updateTrainees(S1Trainees);
+                this.props.updateTrainees(traineesS1);
                 this.setState({
-                    availableGroups: s1Groups
+                    availableGroups: groupS1
                 });
                 break;
             case '2':
-                this.props.updateTrainees(S2Trainees);
+                this.props.updateTrainees(traineesS2);
                 this.setState({
-                    availableGroups: s2Groups
+                    availableGroups: groupS2
                 });
                 break;
             case '3':
             default:
-                this.props.updateTrainees(S3Trainees);
+                this.props.updateTrainees(traineesS3);
                 this.setState({
-                    availableGroups: s3Groups
+                    availableGroups: groupS3
                 });
                 break;
         }
@@ -78,19 +79,19 @@ export default class GroupPicker extends Component {
                 <h2>Welcome to the PRODUCE Sorter</h2>
                 <p className='sub-text'>For best results, avoid picking tied.</p> 
                 <p className='sub-text'>Trainees that fall into no opinion will be removed from the sort and added to the bottom of your results.</p>
-                <p className='sub-text'>Please <a href='https://github.com/RYUUSEiiSTAR/produce48-sorter/issues' alt='Github issues page for PRODUCE48-SORTER'>report any issues here</a></p>
+                <p className='sub-text'>Please <a className={`color-s${this.props.currentSeason}`} href='https://github.com/RYUUSEiiSTAR/produce48-sorter/issues' alt='Github issues page for PRODUCE48-SORTER'>report any issues here</a></p>
                 <br />
-                <select value={this.props.currentSeason} onChange={this.onChangeSeason}>
+                <select className={`select-s${this.props.currentSeason}`} value={this.props.currentSeason} onChange={this.onChangeSeason}>
                     {this.state.availableSeasons}
                 </select>
                 <br />
-                <select value={this.props.currentGroup} onChange={this.onChangeGroup}>
+                <select className={`select-s${this.props.currentSeason}`} value={this.props.currentGroup} onChange={this.onChangeGroup}>
                     {this.state.availableGroups}
                 </select>
                 <br />
                 <br />
                 <Link to='/sort'>
-                    <button type='button' className='start-btn' onClick={() => this.props.updateTrainees(traineeList) }>
+                    <button type='button' className={`start-btn start-btn-s${this.props.currentSeason}`} onClick={() => this.props.updateTrainees(traineeList) }>
                         START!
                     </button>
                 </Link>
