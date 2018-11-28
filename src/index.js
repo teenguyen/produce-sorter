@@ -11,7 +11,7 @@ import rootReducer from './reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(rootReducer, {
-    group: '3',
+    group: '5',
     girls: GIRLS
 });
 

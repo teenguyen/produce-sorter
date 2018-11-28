@@ -39,8 +39,9 @@ html, body {
   }
 
   .header {
-    background: url(./resources/header.png) center repeat;
+    background: url(./resources/header.png) center;
     height: 250px;
+    flex-grow: 0;
   }
 
   .content {
