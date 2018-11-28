@@ -1,5 +1,6 @@
 export const ROUNDS = [
-    // { key:4, name:'Elimination 3 (20)' },
+    { key:5, name:'I*ZONE (12)' },
+    { key:4, name:'Elimination 3 (20)' },
     { key:3, name:'Elimination 2 (30)' },
     { key:2, name:'Elimination 1 (58)' },
     { key:1, name:'Left Show (92)' },
