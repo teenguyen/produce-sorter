@@ -225,14 +225,13 @@ export default class SortPicker extends Component {
       );
     }
 
-    const progressBarStyle = { width: `${this.state.progress}%` };
     return (
       <div>
         <div className="progress">
           <div
             className="progress-bar progress-bar-striped active"
             role="progressbar"
-            style={progressBarStyle}
+            style={{ width: `${this.state.progress}%` }}
           ></div>
         </div>
         <p>{this.state.progress}% Sorted</p>
