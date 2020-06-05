@@ -1,20 +1,20 @@
-import { connect } from 'react-redux';
-import GroupPicker from './../pages/GroupPicker';
+import { connect } from "react-redux";
+import GroupPicker from "./../pages/GroupPicker";
 
-import { setGroup , updateGirls } from './../actions/actions';
+import { setGroup, updateGirls } from "./../actions/actions";
 const mapStateToProps = (state, nextProps) => ({
-    girls: state.girls,
-    currentGroup: state.group
+  girls: state.girls,
+  currentGroup: state.group
 });
 
 const mapDispatchToProps = {
-    setGroup,
-    updateGirls
+  setGroup,
+  updateGirls
 };
 
 const GroupPickerContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(GroupPicker);
 
 export default GroupPickerContainer;

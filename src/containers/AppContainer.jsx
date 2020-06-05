@@ -1,16 +1,13 @@
-import { connect } from 'react-redux';
-import App from './../pages/App';
+import { connect } from "react-redux";
+import App from "./../pages/App";
 
 const mapStateToProps = (state, nextProps) => ({
-    group: state.group,
-    girls: state.girls
+  group: state.group,
+  girls: state.girls
 });
 
-const mapDispatchToProps = { };
+const mapDispatchToProps = {};
 
-const AppContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
+const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default AppContainer;
