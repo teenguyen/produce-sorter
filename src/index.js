@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import { GIRLS } from './util/Girls';
-import './App.css';
+import './App.scss';
 import AppContainer from './containers/AppContainer';
 import rootReducer from './reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
